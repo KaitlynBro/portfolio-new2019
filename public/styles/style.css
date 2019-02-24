@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Crimson+Text|Josefin+Sans");
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block; }
 
@@ -130,3 +131,163 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
+
+body {
+  cursor: crosshair;
+  height: 9000px; }
+
+.about-wrapper .about-content {
+  margin: 0 auto;
+  max-width: 975px;
+  text-align: center; }
+  .about-wrapper .about-content .about-header.small {
+    font-size: 16px;
+    color: #F68C9D;
+    font-family: "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+    line-height: 24px; }
+  .about-wrapper .about-content .about-header.big {
+    font-size: 30px;
+    color: #000;
+    font-family: "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+    line-height: 36px;
+    letter-spacing: 10px; }
+
+header {
+  height: 100vh;
+  background: #fae2e2;
+  background: linear-gradient(50deg, #FAE2E2 55%, #F2F2F2 50%);
+  position: relative; }
+  header .header-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    padding: 20px 0 100px;
+    margin-bottom: 50px; }
+    header .header-nav .right .logo-wrapper {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      position: relative; }
+      header .header-nav .right .logo-wrapper .logo-letter {
+        position: absolute;
+        top: 0%;
+        font-size: 34px;
+        font-weight: bold; }
+      header .header-nav .right .logo-wrapper .logo-circle {
+        width: 50px;
+        height: 50px; }
+    header .header-nav .left {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; }
+      header .header-nav .left .menu-btn {
+        background-color: unset;
+        color: #000;
+        font-size: 14px;
+        text-transform: uppercase;
+        border: none;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
+        header .header-nav .left .menu-btn p {
+          margin-bottom: 0; }
+        header .header-nav .left .menu-btn:hover {
+          cursor: crosshair; }
+        header .header-nav .left .menu-btn:after {
+          content: unset; }
+        header .header-nav .left .menu-btn:focus {
+          outline: none;
+          -webkit-box-shadow: none;
+                  box-shadow: none; }
+      header .header-nav .left span {
+        width: 30px;
+        height: 30px;
+        margin-left: 10px; }
+      header .header-nav .left .dropdown-menu {
+        background-color: #FAE2E2;
+        border: unset;
+        -webkit-transform: translate3d(645px, 50px, 0px) !important;
+                transform: translate3d(645px, 50px, 0px) !important; }
+        header .header-nav .left .dropdown-menu a.dropdown-item {
+          font-family: "Josefin Sans", sans-serif;
+          font-size: 20px;
+          color: #000;
+          text-transform: uppercase;
+          letter-spacing: 0.5px; }
+          header .header-nav .left .dropdown-menu a.dropdown-item:hover {
+            background-color: #F2F2F2;
+            cursor: crosshair; }
+  header .scroll {
+    position: absolute;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    right: 0;
+    bottom: 160px; }
+    header .scroll p {
+      color: #000;
+      font-size: 20px; }
+      header .scroll p:after {
+        content: "";
+        width: 100px;
+        height: 2px;
+        background-color: #000;
+        position: absolute;
+        top: 35%;
+        right: -140%; }
+  header .header-image {
+    background-image: url("../../assets/header-image.jpg");
+    background-repeat: no-repeat;
+    width: 850px;
+    height: 600px;
+    background-attachment: fixed;
+    margin: 0 auto;
+    position: relative;
+    -webkit-transition: all 1s;
+    transition: all 1s; }
+    header .header-image h1 {
+      position: absolute;
+      top: -22%;
+      left: 0%;
+      font-size: 50px;
+      width: 60%;
+      font-weight: 200;
+      margin: 0 auto;
+      -webkit-transition: all 1s;
+      transition: all 1s; }
+      header .header-image h1:before {
+        content: "";
+        position: absolute;
+        background-color: black;
+        width: 100px;
+        height: 5px;
+        left: -110px;
+        top: 26%; }

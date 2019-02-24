@@ -1,0 +1,119 @@
+// header {
+// 	height:100vh;
+// 	background: rgb(250,226,226);
+// 	background: linear-gradient(50deg, $pink 55%, $lightgrey 50%);
+// 	position:relative; 
+// 	.header-nav {
+// 		display: flex;
+// 		flex-direction:row;
+// 		justify-content:space-evenly;
+// 		padding:20px 0 100px;
+// 		.right {
+// 			.logo-wrapper {
+// 				display: flex;
+// 			    flex-direction: row;
+// 			    justify-content: center;
+// 			    position: relative;
+// 			    .logo-letter {
+// 			    	position: absolute;
+// 		    	    top: 0%;
+// 		    	    font-size: 34px;
+// 		    	    font-weight: bold;
+// 			    }
+// 			    .logo-circle {
+// 			    	width:50px;
+// 			    	height:50px;
+// 			    }
+// 			}
+// 		}
+// 		.left {
+// 			display: flex;
+// 			justify-content: flex-end;
+// 			.menu-btn {
+// 				background-color: unset;
+// 				color:$black;
+// 				font-size:14px;
+// 				text-transform: uppercase;
+// 				border:none;
+// 				display: flex;
+// 				flex-direction: row;
+// 				justify-content: flex-start;
+// 				align-items:center;
+// 				p {
+// 					margin-bottom: 0;
+// 				}
+// 				&:hover {
+// 					cursor:crosshair;
+// 				}
+// 				&:after {
+// 					content:unset;
+// 				}
+// 				&:focus {
+// 					outline: none;
+// 					box-shadow:none;
+// 				}
+// 			}
+// 			span {
+// 				width:30px;
+// 				height:30px;
+// 				margin-left: 10px;
+// 			}
+// 			.dropdown-menu {
+// 				background-color:$pink;
+// 				border:unset;
+// 				transform:translate3d(645px, 50px, 0px) !important;
+// 				a.dropdown-item {
+// 					font-family: $josefin;
+// 					font-size: 20px;
+// 					color: $black;
+// 					text-transform:uppercase;
+// 					letter-spacing: 0.5px;
+// 					&:hover {
+// 						background-color:$lightgrey;
+// 						cursor:crosshair;
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// 	.scroll {
+// 		position: absolute;
+// 		transform:rotate(90deg);
+// 		right:0;
+// 		bottom:160px;
+// 		p {
+// 			color: $black;
+// 			font-size:20px;
+// 			&:after {
+// 				content:"";
+// 				width:100px;
+// 				height:2px;
+// 				background-color:$black;
+// 				position: absolute;
+// 				top: 35%;
+// 				right: -140%;
+// 			}
+// 		} 
+// 	}
+// 	.header-image {
+// 		background-image:url('../../assets/header-image.jpg');
+// 		background-repeat: no-repeat;
+// 		width: 850px;
+// 		height: 600px;
+// 	    background-attachment: fixed;
+// 	    margin: 0 auto;
+// 	    position: relative;
+// 	    transition:all 1s;
+// 	    h1 {
+// 	    	position: absolute;
+// 	    	top: -20%;
+// 	    	left: 0%;
+//     	    font-size: 50px;
+//     	    width: 100%;
+//     	    font-weight: 200;
+//     	    margin: 0 auto;
+//     	    transition:all 1s;
+// 	    }
+// 	}
+// }
+
