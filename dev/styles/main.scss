@@ -10,24 +10,152 @@ body {
 }
 
 .about-wrapper {
+	padding:157px 138px;
 	.about-content {
 		margin:0 auto;
 		max-width:975px;
 		text-align: center;
+		.about-header, .about-bg {
+			font-family: $josefin;
+		}
 		.about-header.small {
 			font-size:16px;
 			color:$darkpink;
-			font-family: $josefin;
 			text-transform: uppercase;
 			line-height: 24px;
 		}
 		.about-header.big {
 			font-size:30px;
 			color:$black;
-			font-family: $josefin;
 			text-transform: uppercase;
 			line-height: 36px;
 			letter-spacing: 10px;
+		}
+		.about-bg {
+			font-size: 16px;
+			line-height: 18px;
+			color: $white;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			background-color:$black;
+			padding:10px 60px 8px;
+			span.f {
+				position:relative;
+				&:before {
+					content: "";
+					position: absolute;
+					background: $black;
+					height: 3px;
+					width: 100px;
+					left: -120px;
+					top: 40%;
+				}
+			}
+			span.r {
+				position: relative;
+				&:before {
+					content: "";
+					position: absolute;
+					background: $black;
+					height: 3px;
+					width: 100px;
+					right: -120px;
+					top: 40%;
+				}
+			}
+		}
+		.about-text {
+			color: $black;
+			font-size: 16px;
+			line-height: 24px;
+			font-family: $crimson;
+			max-width: 90%;
+			&:first-of-type {
+				margin-top: 40px;
+			}
+		}
+	}
+	.about-images-container {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		margin-top: 90px;
+		.about-image {
+			width: 110px;
+			height:110px;
+			margin:0 2px;
+			background-repeat:no-repeat;
+			background-position:center center;
+			transition:all 0.8s ease-out;
+			position: relative;
+			&:after {
+				color:transparent;
+				font-size: 20px;
+				font-weight: 200;
+				transition:all 0.5s ease-in;
+				position: absolute;
+				top: 20%;
+				left: 50%;
+				transform:translate(-50%);
+			}
+			&:hover {
+				width:130px;
+				height: 130px;
+				background-image:unset !important;
+				background-color:$black;
+				&:after {
+					color: $white;
+				}
+			}
+			&:first-of-type {
+				background-image:url('../../assets/icon-1.jpg');
+				&:after {
+					content:"toronto based";
+				}
+			}
+			&:nth-child(2) {
+				background-image:url('../../assets/icon-2.jpg');
+				&:after {
+					content:"loves cats";
+				}
+			}
+			&:nth-child(3) {
+				background-image:url('../../assets/icon-3.jpg');
+				&:after {
+					content:"lover of health fads";
+				}
+			}
+			&:nth-child(4) {
+				background-image:url('../../assets/icon-4.jpg');
+				&:after {
+					content:"<3's coding";
+				}
+			}
+			&:nth-child(5) {
+				background-image:url('../../assets/icon-5.jpg');
+				&:after {
+					content:"wants to become full stack...eventually";
+					font-size: 15px;
+				}
+			}
+			&:nth-child(6) {
+				background-image:url('../../assets/icon-6.jpg');
+				&:after {
+					content:"plant lover";
+				}
+			}
+			&:nth-child(7) {
+				background-image:url('../../assets/icon-7.jpg');
+				&:after {
+					content:"passionate, hardworking, and love learning";
+				}
+			}
+			&:nth-child(2), &:nth-child(4), &:nth-child(6) {
+				background-size: cover;
+			}
+			&:nth-child(1), &:nth-child(3), &:nth-child(5), &:nth-child(7) {
+				background-size: contain;
+			}
 		}
 	}
 }
@@ -51,13 +179,13 @@ header {
 			    position: relative;
 			    .logo-letter {
 			    	position: absolute;
-		    	    top: 0%;
+		    	    top: 15%;
 		    	    font-size: 34px;
-		    	    font-weight: bold;
+		    	    font-weight: 400;
 			    }
 			    .logo-circle {
-			    	width:50px;
-			    	height:50px;
+			    	width:70px;
+			    	height:70px;
 			    }
 			}
 		}
