@@ -4,13 +4,22 @@
 @import 'partials/about';
 @import url('https://fonts.googleapis.com/css?family=Crimson+Text|Josefin+Sans');
 
+
+// @keyframes expand {
+// 	25% {width:120px; height: 120px;}
+// 	75% {width:130px;height: 130px;}
+// 	100% width:18px;height: 138px;}
+// }
+//   -webkit-animation: expand 5s infinite; /* Safari 4.0 - 8.0 */
+//   animation: expand 5s infinite;
+
 body {
 	cursor:crosshair;
 	height:9000px;
 }
 
 .about-wrapper {
-	padding:157px 138px;
+	padding:100px 138px;
 	.about-content {
 		margin:0 auto;
 		max-width:975px;
@@ -23,6 +32,7 @@ body {
 			color:$darkpink;
 			text-transform: uppercase;
 			line-height: 24px;
+			margin-right:10px;
 		}
 		.about-header.big {
 			font-size:30px;
@@ -68,10 +78,12 @@ body {
 			color: $black;
 			font-size: 16px;
 			line-height: 24px;
-			font-family: $crimson;
-			max-width: 90%;
+			font-family: $josefin;
+			max-width: 600px;
+			margin: 0 auto;
 			&:first-of-type {
 				margin-top: 40px;
+				margin-bottom: 20px;
 			}
 		}
 	}
@@ -86,68 +98,61 @@ body {
 			margin:0 2px;
 			background-repeat:no-repeat;
 			background-position:center center;
-			transition:all 0.8s ease-out;
+			transition:all 0.5s ease-out;
 			position: relative;
-			&:after {
-				color:transparent;
-				font-size: 20px;
-				font-weight: 200;
-				transition:all 0.5s ease-in;
-				position: absolute;
-				top: 20%;
-				left: 50%;
-				transform:translate(-50%);
-			}
 			&:hover {
 				width:130px;
 				height: 130px;
-				background-image:unset !important;
-				background-color:$black;
-				&:after {
-					color: $white;
-				}
+				background-size:cover;
 			}
 			&:first-of-type {
 				background-image:url('../../assets/icon-1.jpg');
-				&:after {
-					content:"toronto based";
+				&:hover {
+					background-image:url('../../assets/bg-1.jpg');
+					// Photo by Jacob Campbell on Unsplash
+
 				}
 			}
 			&:nth-child(2) {
 				background-image:url('../../assets/icon-2.jpg');
-				&:after {
-					content:"loves cats";
+				&:hover {
+					background-image:url('../../assets/bg-2.jpg');
+					// Photo by Paweł Czerwiński on Unsplash
 				}
 			}
 			&:nth-child(3) {
 				background-image:url('../../assets/icon-3.jpg');
-				&:after {
-					content:"lover of health fads";
+				&:hover {
+					background-image:url('../../assets/bg-3.jpg');
+					// Photo by Paweł Czerwiński on Unsplash
 				}
 			}
 			&:nth-child(4) {
 				background-image:url('../../assets/icon-4.jpg');
-				&:after {
-					content:"<3's coding";
+				&:hover {
+					background-image:url('../../assets/bg-4.jpg');
+					// Photo by Paweł Czerwiński on Unsplash
 				}
 			}
 			&:nth-child(5) {
 				background-image:url('../../assets/icon-5.jpg');
-				&:after {
-					content:"wants to become full stack...eventually";
-					font-size: 15px;
+				&:hover {
+					background-image:url('../../assets/bg-5.jpg');
+					// Photo by Geordanna Cordero-Fields on Unsplash
 				}
 			}
 			&:nth-child(6) {
 				background-image:url('../../assets/icon-6.jpg');
-				&:after {
-					content:"plant lover";
+				&:hover {
+					background-image:url('../../assets/bg-6.jpg');
+					// Photo by Annie Spratt on Unsplash
 				}
 			}
 			&:nth-child(7) {
 				background-image:url('../../assets/icon-7.jpg');
-				&:after {
-					content:"passionate, hardworking, and love learning";
+				&:hover {
+					background-image:url('../../assets/bg-7.jpg');
+					// Photo by Nico Mksmc on Unsplash
 				}
 			}
 			&:nth-child(2), &:nth-child(4), &:nth-child(6) {

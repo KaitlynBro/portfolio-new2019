@@ -137,7 +137,7 @@ body {
   height: 9000px; }
 
 .about-wrapper {
-  padding: 157px 138px; }
+  padding: 100px 138px; }
   .about-wrapper .about-content {
     margin: 0 auto;
     max-width: 975px;
@@ -148,7 +148,8 @@ body {
       font-size: 16px;
       color: #F68C9D;
       text-transform: uppercase;
-      line-height: 24px; }
+      line-height: 24px;
+      margin-right: 10px; }
     .about-wrapper .about-content .about-header.big {
       font-size: 30px;
       color: #000;
@@ -187,10 +188,12 @@ body {
       color: #000;
       font-size: 16px;
       line-height: 24px;
-      font-family: "Crimson Text", serif;
-      max-width: 90%; }
+      font-family: "Josefin Sans", sans-serif;
+      max-width: 600px;
+      margin: 0 auto; }
       .about-wrapper .about-content .about-text:first-of-type {
-        margin-top: 40px; }
+        margin-top: 40px;
+        margin-bottom: 20px; }
   .about-wrapper .about-images-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -209,56 +212,41 @@ body {
       margin: 0 2px;
       background-repeat: no-repeat;
       background-position: center center;
-      -webkit-transition: all 0.8s ease-out;
-      transition: all 0.8s ease-out;
+      -webkit-transition: all 0.5s ease-out;
+      transition: all 0.5s ease-out;
       position: relative; }
-      .about-wrapper .about-images-container .about-image:after {
-        color: transparent;
-        font-size: 20px;
-        font-weight: 200;
-        -webkit-transition: all 0.5s ease-in;
-        transition: all 0.5s ease-in;
-        position: absolute;
-        top: 20%;
-        left: 50%;
-        -webkit-transform: translate(-50%);
-                transform: translate(-50%); }
       .about-wrapper .about-images-container .about-image:hover {
         width: 130px;
         height: 130px;
-        background-image: unset !important;
-        background-color: #000; }
-        .about-wrapper .about-images-container .about-image:hover:after {
-          color: #fff; }
+        background-size: cover; }
       .about-wrapper .about-images-container .about-image:first-of-type {
         background-image: url("../../assets/icon-1.jpg"); }
-        .about-wrapper .about-images-container .about-image:first-of-type:after {
-          content: "toronto based"; }
+        .about-wrapper .about-images-container .about-image:first-of-type:hover {
+          background-image: url("../../assets/bg-1.jpg"); }
       .about-wrapper .about-images-container .about-image:nth-child(2) {
         background-image: url("../../assets/icon-2.jpg"); }
-        .about-wrapper .about-images-container .about-image:nth-child(2):after {
-          content: "loves cats"; }
+        .about-wrapper .about-images-container .about-image:nth-child(2):hover {
+          background-image: url("../../assets/bg-2.jpg"); }
       .about-wrapper .about-images-container .about-image:nth-child(3) {
         background-image: url("../../assets/icon-3.jpg"); }
-        .about-wrapper .about-images-container .about-image:nth-child(3):after {
-          content: "lover of health fads"; }
+        .about-wrapper .about-images-container .about-image:nth-child(3):hover {
+          background-image: url("../../assets/bg-3.jpg"); }
       .about-wrapper .about-images-container .about-image:nth-child(4) {
         background-image: url("../../assets/icon-4.jpg"); }
-        .about-wrapper .about-images-container .about-image:nth-child(4):after {
-          content: "<3's coding"; }
+        .about-wrapper .about-images-container .about-image:nth-child(4):hover {
+          background-image: url("../../assets/bg-4.jpg"); }
       .about-wrapper .about-images-container .about-image:nth-child(5) {
         background-image: url("../../assets/icon-5.jpg"); }
-        .about-wrapper .about-images-container .about-image:nth-child(5):after {
-          content: "wants to become full stack...eventually";
-          font-size: 15px; }
+        .about-wrapper .about-images-container .about-image:nth-child(5):hover {
+          background-image: url("../../assets/bg-5.jpg"); }
       .about-wrapper .about-images-container .about-image:nth-child(6) {
         background-image: url("../../assets/icon-6.jpg"); }
-        .about-wrapper .about-images-container .about-image:nth-child(6):after {
-          content: "plant lover"; }
+        .about-wrapper .about-images-container .about-image:nth-child(6):hover {
+          background-image: url("../../assets/bg-6.jpg"); }
       .about-wrapper .about-images-container .about-image:nth-child(7) {
         background-image: url("../../assets/icon-7.jpg"); }
-        .about-wrapper .about-images-container .about-image:nth-child(7):after {
-          content: "passionate, hardworking, and love learning"; }
+        .about-wrapper .about-images-container .about-image:nth-child(7):hover {
+          background-image: url("../../assets/bg-7.jpg"); }
       .about-wrapper .about-images-container .about-image:nth-child(2), .about-wrapper .about-images-container .about-image:nth-child(4), .about-wrapper .about-images-container .about-image:nth-child(6) {
         background-size: cover; }
       .about-wrapper .about-images-container .about-image:nth-child(1), .about-wrapper .about-images-container .about-image:nth-child(3), .about-wrapper .about-images-container .about-image:nth-child(5), .about-wrapper .about-images-container .about-image:nth-child(7) {
