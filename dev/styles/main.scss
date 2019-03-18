@@ -2,6 +2,7 @@
 @import 'variables';
 @import 'partials/header';
 @import 'partials/about';
+@import 'partials/services';
 @import url('https://fonts.googleapis.com/css?family=Crimson+Text|Josefin+Sans');
 
 
@@ -10,45 +11,61 @@
     50%{ right: 50%;}
     100%{ right: 100;}
 }
+
+@-webkit-keyframes nod {
+	50%{ transform: rotate(30deg);}
+	100%{ transform: rotate(-30deg); }
+}
 //   -webkit-animation: expand 5s infinite; /* Safari 4.0 - 8.0 */
-//   animation: expand 5s infinite;
+//   animation: nod 5s infinite;
 
 body {
 	cursor:crosshair;
-	height:9000px;
+	// height:9000px;
 }
 
 .skills-section {
 	.skills-wrapper {
 		background-color:$pink;
 		margin: 0 auto;
-		max-width: 1400px;
+		max-width: 1390px;
 		width:100%;
-		.scrolling-wrapper {
-			display: flex;
-			flex-wrap: nowrap;
-			overflow-x: auto;
-			padding:50px 0;
-			.card {
+		padding:50px 0;
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		position: relative;
+		.skill-col {
+			&.animate {
+				position: absolute;
+    			right: 0px;
+				top: 20%;
+				animation: nod 5s infinite;
+			}
+			.skill-item {
 				flex: 0 0 auto;
 				width: 150px;
-			    height: 150px;
-			    background-color: $white;
-			    display: flex;
-			    justify-content: center;
-			    align-items: center;
-			    border-radius: 50%;
-			    padding-top:2%;
-			    border:none;
-			    margin:0 20px;
-			    text-align: center;
-			    span {
-			    	height:100px;
-			    	img {
-			    		width: 70px;
-			    		height: 70px;
-			    	}
-			    }
+				height: 150px;
+				background-color: $white;
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				align-items: center;
+				border-radius: 50%;
+				padding-top:2%;
+				border:none;
+				margin:20px;
+				text-align: center;
+				&.animated {
+					animation: nod 4s ease;
+				}
+				span {
+					height:70px;
+					img {
+						width: 70px;
+						height: 70px;
+					}
+				}
 			}
 		}
 	}
@@ -205,7 +222,7 @@ body {
 }
 
 header {
-	height:900px;
+	height:100vh;
 	background: rgb(250,226,226);
 	background: linear-gradient(50deg, $pink 55%, $lightgrey 50%);
 	position:relative; 
@@ -258,6 +275,7 @@ header {
 				&:focus {
 					outline: none;
 					box-shadow:none;
+					outline: unset !important;
 				}
 			}
 			span {
@@ -307,7 +325,7 @@ header {
 	.header-image {
 		background-image:url('../../assets/header-image.jpg');
 		background-repeat: no-repeat;
-		width: 850px;
+		max-width: 850px;
 		height: 600px;
 	    background-attachment: fixed;
 	    margin: 0 auto;

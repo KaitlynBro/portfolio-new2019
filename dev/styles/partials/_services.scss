@@ -1,0 +1,22 @@
+.services-wrapper {
+	.services {
+		// .left, .right {
+
+		// }
+		.services-left-image {
+			background-image: url('../../assets/services-bg.jpg');
+			height:100vh;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center right;
+			min-height: 655px;
+			&:after {
+				content:"I offer";
+				text-transform: uppercase;
+				font-family: $josefin;
+				font-size: 18px;
+				color: $black;
+			}
+		}
+	}
+}

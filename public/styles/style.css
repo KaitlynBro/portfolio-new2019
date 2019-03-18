@@ -132,6 +132,20 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+.services-wrapper .services .services-left-image {
+  background-image: url("../../assets/services-bg.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center right;
+  min-height: 655px; }
+  .services-wrapper .services .services-left-image:after {
+    content: "I offer";
+    text-transform: uppercase;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 18px;
+    color: #000; }
+
 @-webkit-keyframes expand {
   0% {
     right: 0; }
@@ -140,49 +154,72 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   100% {
     right: 100; } }
 
+@-webkit-keyframes nod {
+  50% {
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg); }
+  100% {
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg); } }
+
 body {
-  cursor: crosshair;
-  height: 9000px; }
+  cursor: crosshair; }
 
 .skills-section .skills-wrapper {
   background-color: #FAE2E2;
   margin: 0 auto;
-  max-width: 1400px;
-  width: 100%; }
-  .skills-section .skills-wrapper .scrolling-wrapper {
+  max-width: 1390px;
+  width: 100%;
+  padding: 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: relative; }
+  .skills-section .skills-wrapper .skill-col.animate {
+    position: absolute;
+    right: 0px;
+    top: 20%;
+    -webkit-animation: nod 5s infinite;
+            animation: nod 5s infinite; }
+  .skills-section .skills-wrapper .skill-col .skill-item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    overflow-x: auto;
-    padding: 50px 0; }
-    .skills-section .skills-wrapper .scrolling-wrapper .card {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 0 auto;
-              flex: 0 0 auto;
-      width: 150px;
-      height: 150px;
-      background-color: #fff;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      border-radius: 50%;
-      padding-top: 2%;
-      border: none;
-      margin: 0 20px;
-      text-align: center; }
-      .skills-section .skills-wrapper .scrolling-wrapper .card span {
-        height: 100px; }
-        .skills-section .skills-wrapper .scrolling-wrapper .card span img {
-          width: 70px;
-          height: 70px; }
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 50%;
+    padding-top: 2%;
+    border: none;
+    margin: 20px;
+    text-align: center; }
+    .skills-section .skills-wrapper .skill-col .skill-item.animated {
+      -webkit-animation: nod 4s ease;
+              animation: nod 4s ease; }
+    .skills-section .skills-wrapper .skill-col .skill-item span {
+      height: 70px; }
+      .skills-section .skills-wrapper .skill-col .skill-item span img {
+        width: 70px;
+        height: 70px; }
 
 .about-wrapper {
   padding: 100px 138px; }
@@ -303,7 +340,7 @@ body {
         background-size: contain; }
 
 header {
-  height: 900px;
+  height: 100vh;
   background: #fae2e2;
   background: linear-gradient(50deg, #FAE2E2 55%, #F2F2F2 50%);
   position: relative; }
@@ -375,7 +412,8 @@ header {
         header .header-nav .left .menu-btn:focus {
           outline: none;
           -webkit-box-shadow: none;
-                  box-shadow: none; }
+                  box-shadow: none;
+          outline: unset !important; }
       header .header-nav .left span {
         width: 30px;
         height: 30px;
@@ -417,7 +455,7 @@ header {
   header .header-image {
     background-image: url("../../assets/header-image.jpg");
     background-repeat: no-repeat;
-    width: 850px;
+    max-width: 850px;
     height: 600px;
     background-attachment: fixed;
     margin: 0 auto;
