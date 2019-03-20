@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Crimson+Text|Josefin+Sans");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,400|Crimson+Text");
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block; }
 
@@ -132,20 +132,6 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-.services-wrapper .services .services-left-image {
-  background-image: url("../../assets/services-bg.jpg");
-  height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center right;
-  min-height: 655px; }
-  .services-wrapper .services .services-left-image:after {
-    content: "I offer";
-    text-transform: uppercase;
-    font-family: "Josefin Sans", sans-serif;
-    font-size: 18px;
-    color: #000; }
-
 @-webkit-keyframes expand {
   0% {
     right: 0; }
@@ -163,66 +149,164 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
             transform: rotate(-30deg); } }
 
 body {
-  cursor: crosshair; }
+  cursor: crosshair;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300; }
 
-.skills-section .skills-wrapper {
-  background-color: #FAE2E2;
-  margin: 0 auto;
-  max-width: 1390px;
-  width: 100%;
-  padding: 50px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  position: relative; }
-  .skills-section .skills-wrapper .skill-col.animate {
-    position: absolute;
-    right: 0px;
-    top: 20%;
-    -webkit-animation: nod 5s infinite;
-            animation: nod 5s infinite; }
-  .skills-section .skills-wrapper .skill-col .skill-item {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
-    width: 150px;
-    height: 150px;
-    background-color: #fff;
+.services-wrapper {
+  padding: 50px 0; }
+  .services-wrapper .services {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    border-radius: 50%;
-    padding-top: 2%;
-    border: none;
-    margin: 20px;
-    text-align: center; }
-    .skills-section .skills-wrapper .skill-col .skill-item.animated {
-      -webkit-animation: nod 4s ease;
-              animation: nod 4s ease; }
-    .skills-section .skills-wrapper .skill-col .skill-item span {
-      height: 70px; }
-      .skills-section .skills-wrapper .skill-col .skill-item span img {
-        width: 70px;
-        height: 70px; }
+    max-width: 1400px;
+    margin: 0 auto; }
+    .services-wrapper .services .left {
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: relative;
+      background-image: url("../../assets/services-bg.jpg");
+      min-height: 656px;
+      max-width: 700px; }
+      .services-wrapper .services .left .services-title {
+        font-size: 18px;
+        color: #000;
+        font-family: "Josefin Sans", sans-serif;
+        text-transform: uppercase;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        width: 200px;
+        height: 140px;
+        background-color: #fff;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        letter-spacing: 1.5px; }
+        .services-wrapper .services .left .services-title:after {
+          content: "";
+          width: 70px;
+          height: 2px;
+          background-color: #000;
+          color: #000;
+          position: absolute;
+          bottom: 38px; }
+    .services-wrapper .services .right .service-item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin: 50px 65px; }
+      .services-wrapper .services .right .service-item .icon-wrapper {
+        margin-right: 20px;
+        border: 1px solid #ed879f;
+        padding: 20px; }
+        .services-wrapper .services .right .service-item .icon-wrapper .fas {
+          font-size: 25px; }
+      .services-wrapper .services .right .service-item .service-name h2 {
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 24px;
+        color: #000;
+        font-weight: 300; }
+
+.skills-section {
+  padding: 50px; }
+  .skills-section .skills-wrapper {
+    margin: 0 auto;
+    max-width: 1390px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .skills-section .skills-wrapper .skill-col {
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+      .skills-section .skills-wrapper .skill-col.animate {
+        position: absolute;
+        right: -150px;
+        top: 20%;
+        -webkit-animation: nod 5s infinite;
+                animation: nod 5s infinite; }
+      .skills-section .skills-wrapper .skill-col .skill-item {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 auto;
+                flex: 0 0 auto;
+        width: 150px;
+        height: 150px;
+        background-color: #fff;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        border-radius: 50%;
+        padding-top: 2%;
+        border: none;
+        margin: 20px;
+        text-align: center; }
+        .skills-section .skills-wrapper .skill-col .skill-item p {
+          margin: 10px 0 0px; }
+        .skills-section .skills-wrapper .skill-col .skill-item.animated {
+          -webkit-animation: nod 4s ease;
+                  animation: nod 4s ease; }
+        .skills-section .skills-wrapper .skill-col .skill-item span {
+          height: 70px; }
+          .skills-section .skills-wrapper .skill-col .skill-item span img {
+            width: 70px;
+            height: 70px; }
 
 .about-wrapper {
-  padding: 100px 138px; }
+  padding: 50px 0; }
   .about-wrapper .about-content {
     margin: 0 auto;
     max-width: 975px;
@@ -281,7 +365,12 @@ body {
         .about-wrapper .about-content .about-me .about-text:first-of-type {
           margin-top: 40px;
           margin-bottom: 20px; }
-  .about-wrapper .about-images-container {
+  .about-wrapper .about-social-container {
+    padding: 50px 0;
+    background: #FAE2E2;
+    max-width: 1390px;
+    width: 100%;
+    margin: 50px auto 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -291,53 +380,35 @@ body {
             flex-direction: row;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
-            justify-content: center;
-    margin-top: 35px; }
-    .about-wrapper .about-images-container .about-image {
-      width: 110px;
-      height: 110px;
-      margin: 0 2px;
-      background-repeat: no-repeat;
-      background-position: center center;
-      -webkit-transition: all 0.5s ease-out;
-      transition: all 0.5s ease-out;
-      position: relative; }
-      .about-wrapper .about-images-container .about-image:hover {
-        width: 130px;
-        height: 130px;
-        background-size: cover; }
-      .about-wrapper .about-images-container .about-image:first-of-type {
-        background-image: url("../../assets/icon-1.jpg"); }
-        .about-wrapper .about-images-container .about-image:first-of-type:hover {
-          background-image: url("../../assets/bg-1.jpg"); }
-      .about-wrapper .about-images-container .about-image:nth-child(2) {
-        background-image: url("../../assets/icon-2.jpg"); }
-        .about-wrapper .about-images-container .about-image:nth-child(2):hover {
-          background-image: url("../../assets/bg-2.jpg"); }
-      .about-wrapper .about-images-container .about-image:nth-child(3) {
-        background-image: url("../../assets/icon-3.jpg"); }
-        .about-wrapper .about-images-container .about-image:nth-child(3):hover {
-          background-image: url("../../assets/bg-3.jpg"); }
-      .about-wrapper .about-images-container .about-image:nth-child(4) {
-        background-image: url("../../assets/icon-4.jpg"); }
-        .about-wrapper .about-images-container .about-image:nth-child(4):hover {
-          background-image: url("../../assets/bg-4.jpg"); }
-      .about-wrapper .about-images-container .about-image:nth-child(5) {
-        background-image: url("../../assets/icon-5.jpg"); }
-        .about-wrapper .about-images-container .about-image:nth-child(5):hover {
-          background-image: url("../../assets/bg-5.jpg"); }
-      .about-wrapper .about-images-container .about-image:nth-child(6) {
-        background-image: url("../../assets/icon-6.jpg"); }
-        .about-wrapper .about-images-container .about-image:nth-child(6):hover {
-          background-image: url("../../assets/bg-6.jpg"); }
-      .about-wrapper .about-images-container .about-image:nth-child(7) {
-        background-image: url("../../assets/icon-7.jpg"); }
-        .about-wrapper .about-images-container .about-image:nth-child(7):hover {
-          background-image: url("../../assets/bg-7.jpg"); }
-      .about-wrapper .about-images-container .about-image:nth-child(2), .about-wrapper .about-images-container .about-image:nth-child(4), .about-wrapper .about-images-container .about-image:nth-child(6) {
-        background-size: cover; }
-      .about-wrapper .about-images-container .about-image:nth-child(1), .about-wrapper .about-images-container .about-image:nth-child(3), .about-wrapper .about-images-container .about-image:nth-child(5), .about-wrapper .about-images-container .about-image:nth-child(7) {
-        background-size: contain; }
+            justify-content: center; }
+    .about-wrapper .about-social-container .social-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center; }
+      .about-wrapper .about-social-container .social-container .fab {
+        color: #000;
+        font-size: 45px; }
+      .about-wrapper .about-social-container .social-container a {
+        background-color: white;
+        width: 110px;
+        border-radius: 50%;
+        height: 110px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
+        .about-wrapper .about-social-container .social-container a:hover {
+          text-decoration: none; }
 
 header {
   height: 100vh;
