@@ -12,9 +12,11 @@
 }
 
 @-webkit-keyframes nod {
-	50%{ transform: rotate(30deg);}
+	0%{ transform: rotate(0); }
+	50%{ transform: rotate(30deg); }
 	100%{ transform: rotate(-30deg); }
 }
+
 //   -webkit-animation: expand 5s infinite; /* Safari 4.0 - 8.0 */
 //   animation: nod 5s infinite;
 
@@ -109,11 +111,13 @@ body {
 			align-items: center;
 			display: flex;
 			flex-direction: column;
+			padding:0;
 			&.animate {
 				position: absolute;
-    			right: -150px;
+    			right: -110px;
 				top: 20%;
 				animation: nod 5s infinite;
+				padding:0;
 			}
 			.skill-item {
 				flex: 0 0 auto;
@@ -228,16 +232,18 @@ body {
 		display: flex;
 		flex-direction:row;
 		justify-content: center;
+		transition:all 2s !important;
 		.social-container {
 			display: flex;
 			justify-content: center;
 			align-content: center;
+			transition:all 2s !important;
 			.fab {
 				color: $black;
 				font-size: 45px;
 			}
 			a {
-				background-color: white;
+				background-color: $white;
 				width: 110px;
 				border-radius: 50%;
 				height: 110px;
@@ -246,6 +252,26 @@ body {
 				align-items: center;
 				&:hover {
 					text-decoration: none;
+				}
+			}
+			span {
+				position: absolute;
+				background-color: transparent;
+				padding:0;
+				font-size: 0;
+				transition:all 1s;
+				color: $black;
+				border:$black;
+			}
+			&:hover {
+				span{
+					position: absolute;
+					background-color: $white;
+					padding: 10px 30px;
+					font-size: 20px;
+					border: 1px solid $black;
+					top: 30%;
+					color: $black;
 				}
 			}
 		}
@@ -381,6 +407,113 @@ header {
 	    	    top: 26%;
     	    }
 	    }
+	}
+}
+
+.portfolio-section {
+	padding:50px 0;
+	.portfolio-header {
+		font-size: 18px;
+		color: $black;
+		font-family: $josefin;
+		text-transform: uppercase;
+		letter-spacing: 1.5px;
+		text-align: center;
+		position: relative;
+		margin:50px 0 90px 0;
+		&:after {
+			content: "";
+			width: 150px;
+			height: 2px;
+			background-color: $black;
+			color: $black;
+			position: absolute;
+			bottom: -20px;
+    		left: 50%;
+    		transform: translate(-50%);
+		}
+	}
+	.portfolio-content {
+		display: flex;
+		justify-content: center;
+		width:100%;
+		padding:0;
+		.portfolio-item {
+			height:100vh;
+			background-size: cover;
+			background-position: center center;
+			max-width: 330px;
+			width:100%;
+			height: 235px;
+			display:flex;
+			margin:0 2px;
+			align-items: flex-end;
+			filter:sepia(30%);
+			.portfolio-info {
+				width:100%;
+				background-color: #121212;
+				opacity: 0.9;
+				width:100%;
+				justify-content: center;
+				flex-direction: column;
+				display: flex;
+				height:100px;
+				display:none;
+			}
+			.portfolio-info h3, .portfolio-info p {
+				font-size:16px;
+				color: $white;
+				margin:0;
+			}
+			.portfolio-info p {
+				text-transform: lowercase;
+				padding:0 5px 0 15px;
+			}
+			.portfolio-info h3 {
+				padding:10px 5px 0 15px;
+				text-transform: uppercase;
+			}
+			&:first-of-type {
+				background-image: url('../../assets/knix.jpg');
+				&:hover {
+					.portfolio-info {
+						display: flex;
+					}
+				}
+			}
+			&:nth-child(2) {
+				background-image: url('../../assets/knixteen.jpg');
+				&:hover {
+					.portfolio-info {
+						display: flex;
+					}
+				}
+			}
+			&:nth-child(3) {
+				background-image: url('../../assets/apollo.jpg');
+				&:hover {
+					.portfolio-info {
+						display: flex;
+					}
+				}
+			}
+			&:nth-of-type(4) {
+				background-image: url('../../assets/mias.jpg');
+				&:hover {
+					.portfolio-info {
+						display: flex;
+					}
+				}
+			}
+			&:nth-child(5) {
+				background-image: url('../../assets/makeup.jpg');
+				&:hover {
+					.portfolio-info {
+						display: flex;
+					}
+				}
+			}
+		}
 	}
 }
 
