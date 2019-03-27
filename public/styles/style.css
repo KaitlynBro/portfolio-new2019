@@ -145,11 +145,11 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
     -webkit-transform: rotate(0);
             transform: rotate(0); }
   50% {
-    -webkit-transform: rotate(30deg);
-            transform: rotate(30deg); }
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg); }
   100% {
-    -webkit-transform: rotate(-30deg);
-            transform: rotate(-30deg); } }
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg); } }
 
 body {
   cursor: crosshair;
@@ -305,15 +305,13 @@ body {
         position: absolute;
         right: 250px;
         top: 66%;
-        -webkit-animation: nod 5s infinite;
-                animation: nod 5s infinite;
         padding: 0; }
       .skills-section .skills-wrapper .skill-col .skill-item {
         -webkit-box-flex: 0;
             -ms-flex: 0 0 auto;
                 flex: 0 0 auto;
-        width: 170px;
-        height: 170px;
+        width: 130px;
+        height: 130px;
         background-color: #fff;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -335,14 +333,9 @@ body {
         text-align: center; }
         .skills-section .skills-wrapper .skill-col .skill-item p {
           margin: 10px 0 0px; }
-        .skills-section .skills-wrapper .skill-col .skill-item.animated {
-          -webkit-animation: nod 4s ease;
-                  animation: nod 4s ease; }
-        .skills-section .skills-wrapper .skill-col .skill-item span {
-          height: 70px; }
-          .skills-section .skills-wrapper .skill-col .skill-item span img {
-            width: 70px;
-            height: 70px; }
+        .skills-section .skills-wrapper .skill-col .skill-item span img {
+          width: 40px;
+          height: 40px; }
 
 .about-wrapper {
   padding: 50px 0; }
@@ -783,3 +776,56 @@ header {
               justify-content: center;
       background-color: #000;
       top: 100%; }
+
+footer {
+  margin: 100px 0; }
+  footer .footer-content {
+    max-width: 1390px;
+    min-height: 300px;
+    height: 100%;
+    background-color: #FAE2E2;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    footer .footer-content .footer-top {
+      margin-bottom: 50px; }
+      footer .footer-content .footer-top .logo-letter {
+        font-size: 34px;
+        font-weight: 400;
+        top: 50%;
+        width: 70px;
+        height: 70px;
+        border: 3px solid #000;
+        border-radius: 50%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
+    footer .footer-content .footer-bottom {
+      width: 100%;
+      max-width: 430px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      footer .footer-content .footer-bottom a {
+        color: #000;
+        font-size: 18px; }
