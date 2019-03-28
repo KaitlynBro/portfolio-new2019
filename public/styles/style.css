@@ -605,6 +605,29 @@ header {
         left: -110px;
         top: 26%; }
 
+@media (max-width: 767.98px) {
+  header .header-nav {
+    padding: 20px;
+    margin-bottom: 0;
+    background-color: #FAE2E2; }
+  header .header-image {
+    background-image: none;
+    height: 100vh;
+    background-color: #FAE2E2; }
+    header .header-image h1 {
+      width: 70%;
+      background-color: #fff;
+      padding: 40px;
+      font-size: 20px;
+      border: none;
+      top: 30%;
+      color: #000;
+      left: 50%;
+      -webkit-transform: translate(-50%);
+              transform: translate(-50%); }
+      header .header-image h1:before {
+        content: none; } }
+
 .portfolio-section {
   padding: 50px 0;
   max-width: 1390px;
@@ -828,4 +851,21 @@ footer {
               justify-content: space-between; }
       footer .footer-content .footer-bottom a {
         color: #000;
-        font-size: 18px; }
+        font-size: 18px;
+        text-decoration: none;
+        position: relative; }
+        footer .footer-content .footer-bottom a:hover {
+          -webkit-transition: all 3s ease;
+          transition: all 3s ease; }
+        footer .footer-content .footer-bottom a:after {
+          -webkit-transition: all 3s ease;
+          transition: all 3s ease; }
+        footer .footer-content .footer-bottom a:hover:after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          -webkit-transform: translate(-50%);
+                  transform: translate(-50%);
+          left: 50%;
+          height: 2px;
+          background-color: #000; }
