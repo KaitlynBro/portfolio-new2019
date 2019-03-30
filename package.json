@@ -18,6 +18,8 @@
     "bootstrap": "^4.3.1",
     "browser-sync": "^2.18.12",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0"
+    "gulp-autoprefixer": "^4.0.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.7"
   }
 }

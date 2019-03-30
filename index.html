@@ -24,10 +24,9 @@
 			    <p>Menu</p> <span><img src="../assets/menu.svg" alt="" class="menu-icon"></span>
 			  </a>
 			  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-			    <a class="dropdown-item" href="#">Home</a>
-			    <a class="dropdown-item" href="#">About</a>
-			    <a class="dropdown-item" href="#">Portfolio</a>
-			    <a class="dropdown-item" href="#">Contact</a>
+			    <a class="dropdown-item" href="#about-wrapper">About</a>
+			    <a class="dropdown-item" href="#portfolio-section">Portfolio</a>
+			    <a class="dropdown-item" href="#contact-section">Contact</a>
 			  </div>
 			</div>
 		</div>
@@ -42,7 +41,7 @@
 	</header>
 
 	<main>
-		<section class="about-wrapper">
+		<section class="about-wrapper" id="about-wrapper">
 			<div class="about-content">
 				<h6 class="about-header small">hello, i am</h6>
 				<h4 class="about-header big">Katie</h4>
@@ -54,31 +53,31 @@
 				</div>
 			</div>
 			<div class="about-social-container">
-				<span class="social-container col-lg-2 col-md-12">
+				<span class="social-container col-lg-2 col-md-5 col-sm-12">
 					<a href="https://www.linkedin.com/in/katie-brouwers" target="_blank">
 						<i class="fab fa-linkedin-in"></i>
 						<span>linkedin</span>
 					</a>
 				</span>
-				<span class="social-container col-lg-2 col-md-12">
+				<span class="social-container col-lg-2 col-md-5 col-sm-12">
 					<a href="https://github.com/KaitlynBro" target="_blank">
 					<i class="fab fa-github"></i>
 					<span>github</span>
 				</a>
 				</span>
-				<span class="social-container col-lg-2 col-md-12">
+				<span class="social-container col-lg-2 col-md-5 col-sm-12">
 					<a href="mailto:kaitlynbrouwers@gmail.com">
 					<i class="far fab fa-envelope"></i>
 					<span>contact</span>
 				</a>
 				</span>
-				<span class="social-container col-lg-2 col-md-12">
+				<span class="social-container col-lg-2 col-md-5 col-sm-12">
 					<a href="https://twitter.com/kaitlynbrouwers" target="_blank">
 					<i class="fab fa-twitter"></i>
 					<span>twitter</span>
 				</a>
 				</span>
-				<span class="social-container col-lg-2 col-md-12">
+				<span class="social-container col-lg-2 col-md-5 col-sm-12">
 					<a href="https://medium.com/@katiebrouwers" target="_blank">
 					<i class="fab fa-medium-m"></i>
 					<span>blog</span>
@@ -86,7 +85,7 @@
 				</span>
 			</div>	
 		</section>
-		<!-- <section class="services-wrapper">
+		<!-- <section class="services-wrapper" id="services-wrapper">
 			<div class="services">
 				<div class="col-6 left services-left-image">
 					<div class="services-title">I offer</div>
@@ -194,27 +193,34 @@
 				</div>
 			</div>
 		</section> -->
-		<section class="portfolio-section">
+		<section class="portfolio-section" id="portfolio-section">
 			<h3 class="portfolio-header">Some of my work</h3>
 				<div class="portfolio-content col-12">
 					<div class="portfolio-item">
 						<div class="portfolio-info">
 							<h3>knix</h3>
 							<p>Shopify Plus / Shopify Liquid / Bootstrap / SCSS / jQuery / ES6 </p>
+							<div class="portfolio-info-cta">
+								<a href="https://knix.ca/" target="_blank">see live</a>
+							</div>
 						</div>
-
 					</div>
 					<div class="portfolio-item">
 						<div class="portfolio-info">
 							<h3>knixteen</h3>
 							<p>Shopify Plus / Shopify Liquid / Bootstrap / SCSS / jQuery / ES6 </p>
+							<div class="portfolio-info-cta">
+								<a href="https://www.knixteen.ca/" target="_blank">see live</a>
+							</div>
 						</div>
-
 					</div>
 					<div class="portfolio-item">
 						<div class="portfolio-info">
 							<h3>apollo renewables</h3>
 							<p>HTML5 / SCSS / Bootstrap / JavaScript</p>
+							<div class="portfolio-info-cta">
+								<a href="http://www.apollorenewables.ca/" target="_blank">see live</a>
+							</div>
 						</div>
 
 					</div>
@@ -222,6 +228,9 @@
 						<div class="portfolio-info">
 							<h3>mias</h3>
 							<p>HTML5 / SCSS / Bootstrap / JavaScript</p>
+							<div class="portfolio-info-cta">
+								<a href="https://kaitlynbro.github.io/restaurant-app/" target="_blank">see live</a>
+							</div>
 						</div>
 
 					</div>
@@ -229,11 +238,14 @@
 						<div class="portfolio-info">
 							<h3>what's in your makeup bag?</h3>
 							<p>HTML5 / SCSS / Bootstrap / API / JavaScript</p>
+							<div class="portfolio-info-cta">
+								<a href="https://kaitlynbro.github.io/makeup-API/" target="_blank">see live</a>
+							</div>
 						</div>
 					</div>
 				</div>
 		</section>
-		<section class="contact-section">
+		<section class="contact-section" id="contact-section">
 			<div class="contact-wrapper">
 				<h3 class="contact-title">Contact me</h3>
 				<a href="mailto:kaitlynbrouwers@gmail.com" class="contact-email">
@@ -279,8 +291,8 @@
 	</main>
 	<script src="/public/scripts/app.js"></script>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 </body>
 </html>
 
