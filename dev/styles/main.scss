@@ -369,6 +369,13 @@ body {
 					width: 150px;
 					height: 150px;
 				}
+				.fab {
+					margin-top:-10px;
+				}
+				span {
+					font-size: 20px;
+					bottom:20px;
+				}
 			}
 		}
 	}
@@ -376,15 +383,21 @@ body {
 
 @include media-breakpoint-down(sm) {
 	.about-wrapper {
-		.about-content {
-			.about-social-container {
-				flex-direction: column;
-				.about-me {
-					max-width: 330px;
+		.about-social-container {
+			flex-direction: column;
+			.about-me {
+				max-width: 330px;
+			}
+			.social-container {
+				&:hover {
+					span {
+						border:unset;
+						padding:0;
+					}
+					
 				}
 			}
 		}
-
 	}
 }
 
@@ -406,10 +419,16 @@ header {
 			    justify-content: center;
 			    position: relative;
 			    .logo-letter {
-			    	position: absolute;
-		    	    top: 15%;
-		    	    font-size: 34px;
-		    	    font-weight: 400;
+					font-size: 34px;
+					font-weight: 400;
+					top: 50%;
+					width: 70px;
+					height: 70px;
+					border: 3px solid $black;
+					border-radius: 50%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
 			    }
 			    .logo-circle {
 			    	width:70px;
@@ -535,13 +554,23 @@ header {
 			padding:20px;
 			margin-bottom: 0;
 			background-color: $aqua;
+			.right {
+				display: flex;
+				justify-content: flex-start;
+				padding:0;
+				.logo-wrapper {
+					padding: 0;
+					justify-content: flex-start;
+				}
+			}
 			.left {
 				.dropdown-menu {
 					background-color:$aqua;
 					transform:translate3d(0, -70px, 0px) !important;
 					animation: unset;
 					&.show {
-						transform:translate3d(0px, 0, 0) !important;
+						transform:translate3d(0px, 60px, 0) !important;
+						border:1px solid $black;
 						a:active {
 							background-color: $white;
 						}
@@ -700,6 +729,7 @@ header {
 @include media-breakpoint-down(md) {
 	.portfolio-section {
 		max-width: 320px;
+		height:unset;
 		.portfolio-header {
 			margin:0 0 50px 0;
 		}
