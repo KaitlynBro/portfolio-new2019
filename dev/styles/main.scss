@@ -101,6 +101,32 @@ body {
 	}
 }
 
+@include media-breakpoint-down(md) {
+	.services-wrapper {
+		padding:0 0 50px 0;
+		.services {
+			flex-direction: column;
+			.left {
+				min-height: 255px;
+				max-width: 420px;
+			}
+			.right {
+				.service-item {
+					margin:30px auto;
+					.icon-wrapper {
+						border: 1px solid $green;
+					}
+					.service-name {
+						h2 {
+							font-size: 18px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 .skills-section {
 	padding: 50px 0;
     background:$pink;
@@ -263,7 +289,7 @@ body {
 		flex-direction:row;
 		justify-content: center;
 		transition:all 2s !important;
-		.social-container {
+		.social {
 			display: flex;
 			justify-content: center;
 			align-content: center;
@@ -317,7 +343,7 @@ body {
 			}
 			.about-bg {
 				color:$black;
-				background-color:$aqua;
+				background-color:$green;
 				font-weight: 400;
 				span.f {
 					&:before {
@@ -337,7 +363,7 @@ body {
 			}
 		}
 		.about-social-container {
-			background: $aqua;
+			background: $green;
 			max-width: 100%;
 			display: flex;
 			position: relative;
@@ -356,7 +382,7 @@ body {
 				text-transform: capitalize;
 				margin-bottom:20px;
 			}
-			.social-container {
+			.social {
 				display: flex;
 				justify-content: center;
 				align-content: center;
@@ -376,6 +402,11 @@ body {
 					font-size: 20px;
 					bottom:20px;
 				}
+				&:hover {
+					span {
+						top: unset;
+					}
+				}
 			}
 		}
 	}
@@ -388,7 +419,7 @@ body {
 			.about-me {
 				max-width: 330px;
 			}
-			.social-container {
+			.social {
 				&:hover {
 					span {
 						border:unset;
@@ -406,10 +437,13 @@ header {
 	background: rgb(250,226,226);
 	background: linear-gradient(50deg, $pink 55%, $lightgrey 50%);
 	position:relative; 
+	.test {
+		display:none !important;
+	}
 	.header-nav {
 		display: flex;
 		flex-direction:row;
-		justify-content:space-evenly;
+		justify-content: space-between;
 		padding:20px 0 100px;
 		margin-bottom: 50px;
 		.right {
@@ -475,6 +509,7 @@ header {
 				transform:translate3d(645px, 50px, 0px) !important;
 				-webkit-animation: expand 5s infinite; /* Safari 4.0 - 8.0 */
 				animation: expand 5s infinite;
+				max-width:200px;
 				a.dropdown-item {
 					font-family: $josefin;
 					font-size: 20px;
@@ -492,6 +527,7 @@ header {
 					justify-content: center;
 					transform: translate3d(645px, 50px, 0px) !important;
 					width: 100%;
+					max-width: 180px;
 				}
 			}
 		}
@@ -549,11 +585,11 @@ header {
 @include media-breakpoint-down(md) {
 	header {
 		height:unset;
-		background-color: $aqua;
+		background-color:$green;
 		.header-nav {
 			padding:20px;
 			margin-bottom: 0;
-			background-color: $aqua;
+			background-color:$green;
 			.right {
 				display: flex;
 				justify-content: flex-start;
@@ -565,7 +601,7 @@ header {
 			}
 			.left {
 				.dropdown-menu {
-					background-color:$aqua;
+					background-color:$green;
 					transform:translate3d(0, -70px, 0px) !important;
 					animation: unset;
 					&.show {
@@ -584,7 +620,7 @@ header {
 		.header-image {
 			background-image: none;
 			height:100vh;
-			background-color:$aqua;
+			background-color:$green;
 			h1 {
 				width: 65%;
 				background-color: transparent;
@@ -637,9 +673,11 @@ header {
 			height:100vh;
 			background-size: cover;
 			background-position: center center;
+			background-repeat: no-repeat;
 			max-width: 330px;
 			width:100%;
-			height: 235px;
+			min-height: 235px;
+			height: 100%;
 			display:flex;
 			margin:0 2px;
 			align-items: flex-end;
@@ -652,12 +690,12 @@ header {
 				justify-content: center;
 				flex-direction: column;
 				display: flex;
-				height:100%;
+				min-height:200px;
 				display:none;
 				position:relative;
 				.portfolio-info-cta {
 					position: absolute;
-					bottom:40px;
+					bottom: 20px;
 					margin-left: 20px;
 					a {
 						color: $black;
@@ -728,7 +766,7 @@ header {
 
 @include media-breakpoint-down(md) {
 	.portfolio-section {
-		max-width: 320px;
+		max-width: 100%;
 		height:unset;
 		.portfolio-header {
 			margin:0 0 50px 0;
@@ -736,9 +774,23 @@ header {
 		.portfolio-content {
 			flex-direction: column;
 			.portfolio-item {
-				max-width: 330px;
-				display:flex;
+				object-fit: cover;
+				background-size: cover;
+				background-repeat: no-repeat;
+				min-height: 300px;
+				width: 100%;
+				max-width: unset;
+				position: relative;
 				margin:20px 0;
+				.portfolio-info {
+					height: 100%;
+					width: 50%;
+					padding: 0 20px;
+					box-sizing: border-box;
+					position: absolute;
+					right: 0;
+					display: flex;
+				}
 			}
 		}
 	}
@@ -781,9 +833,6 @@ header {
     		color: black;
 			font-size: 20px;
 			position:relative;
-			&:hover {
-				text-decoration: none;
-			}
 			.contact-underline {
 				position: absolute;
 				background-color: transparent;
@@ -793,6 +842,7 @@ header {
 				color: $white;
 			}
 			&:hover {
+				text-decoration: none;
 				.contact-underline{
 					position: absolute;
 					width: 200px;
@@ -810,18 +860,28 @@ header {
 @include media-breakpoint-down(md) {
 	.contact-section {
 		.contact-wrapper {
-			max-width: 330px;
+			max-width: 420px;
 			margin:0 auto;
-			border:10px solid $aqua;
+			border:10px solid $green;
+			.contact-email {
+				transition:2s;
+				&:hover {
+					text-transform: uppercase;
+					font-size: 16px;
+					.contact-underline {
+						display:none;
+					}
+				}
+			}
 		}
 	}
 }
 
 
 footer {
-	margin:100px 0;
+	margin:100px 0 0;
 	.footer-content {
-		max-width: 1390px;
+		width:100%;
 		min-height: 300px;
 		height: 100%;
 		background-color: $pink;
@@ -877,13 +937,24 @@ footer {
 
 @include media-breakpoint-down(md) {
 	footer {
-		margin:50px 0 0;
+		margin:50px 0 0 0;
 		.footer-content {
 			width: 100%;
 			min-width: 320px;
-			background-color: $aqua;
+			background-color: $green;
 			.footer-bottom {
 				max-width: 330px;
+				.social-container {
+					a {
+						transition:3s;
+						&:hover {
+							text-decoration:underline;
+							&:after {
+								content: unset;
+							}
+						}
+					}
+				}
 			}
 		}
 	}

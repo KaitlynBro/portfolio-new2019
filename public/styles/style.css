@@ -239,6 +239,24 @@ body {
         color: #000;
         font-weight: 300; }
 
+@media (max-width: 991.98px) {
+  .services-wrapper {
+    padding: 0 0 50px 0; }
+    .services-wrapper .services {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+      .services-wrapper .services .left {
+        min-height: 255px;
+        max-width: 420px; }
+      .services-wrapper .services .right .service-item {
+        margin: 30px auto; }
+        .services-wrapper .services .right .service-item .icon-wrapper {
+          border: 1px solid #7BBF6A; }
+        .services-wrapper .services .right .service-item .service-name h2 {
+          font-size: 18px; } }
+
 .skills-section {
   padding: 50px 0;
   background: #FAE2E2;
@@ -418,7 +436,7 @@ body {
             justify-content: center;
     -webkit-transition: all 2s !important;
     transition: all 2s !important; }
-    .about-wrapper .about-social-container .social-container {
+    .about-wrapper .about-social-container .social {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -429,10 +447,10 @@ body {
           align-content: center;
       -webkit-transition: all 2s !important;
       transition: all 2s !important; }
-      .about-wrapper .about-social-container .social-container .fab {
+      .about-wrapper .about-social-container .social .fab {
         color: #000;
         font-size: 45px; }
-      .about-wrapper .about-social-container .social-container a {
+      .about-wrapper .about-social-container .social a {
         background-color: #fff;
         width: 110px;
         border-radius: 50%;
@@ -446,9 +464,9 @@ body {
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center; }
-        .about-wrapper .about-social-container .social-container a:hover {
+        .about-wrapper .about-social-container .social a:hover {
           text-decoration: none; }
-      .about-wrapper .about-social-container .social-container span {
+      .about-wrapper .about-social-container .social span {
         position: absolute;
         background-color: transparent;
         padding: 0;
@@ -457,7 +475,7 @@ body {
         transition: all 1s;
         color: #000;
         border: #000; }
-      .about-wrapper .about-social-container .social-container:hover span {
+      .about-wrapper .about-social-container .social:hover span {
         position: absolute;
         background-color: #fff;
         padding: 10px 30px;
@@ -473,7 +491,7 @@ body {
       color: #000; }
     .about-wrapper .about-content .about-bg {
       color: #000;
-      background-color: #9dffdc;
+      background-color: #7BBF6A;
       font-weight: 400; }
       .about-wrapper .about-content .about-bg span.f:before {
         width: 40px;
@@ -484,7 +502,7 @@ body {
     .about-wrapper .about-content .about-me {
       max-width: 560px; }
     .about-wrapper .about-social-container {
-      background: #9dffdc;
+      background: #7BBF6A;
       max-width: 100%;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -509,7 +527,7 @@ body {
                 transform: translate(-50%);
         text-transform: capitalize;
         margin-bottom: 20px; }
-      .about-wrapper .about-social-container .social-container {
+      .about-wrapper .about-social-container .social {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -521,16 +539,18 @@ body {
         -webkit-transition: all 2s !important;
         transition: all 2s !important;
         margin: 10px 0; }
-        .about-wrapper .about-social-container .social-container:first-of-type {
+        .about-wrapper .about-social-container .social:first-of-type {
           margin: 20px 0 10px 0; }
-        .about-wrapper .about-social-container .social-container a {
+        .about-wrapper .about-social-container .social a {
           width: 150px;
           height: 150px; }
-        .about-wrapper .about-social-container .social-container .fab {
+        .about-wrapper .about-social-container .social .fab {
           margin-top: -10px; }
-        .about-wrapper .about-social-container .social-container span {
+        .about-wrapper .about-social-container .social span {
           font-size: 20px;
-          bottom: 20px; } }
+          bottom: 20px; }
+        .about-wrapper .about-social-container .social:hover span {
+          top: unset; } }
 
 @media (max-width: 767.98px) {
   .about-wrapper .about-social-container {
@@ -540,7 +560,7 @@ body {
             flex-direction: column; }
     .about-wrapper .about-social-container .about-me {
       max-width: 330px; }
-    .about-wrapper .about-social-container .social-container:hover span {
+    .about-wrapper .about-social-container .social:hover span {
       border: unset;
       padding: 0; } }
 
@@ -549,6 +569,8 @@ header {
   background: #fae2e2;
   background: linear-gradient(50deg, #FAE2E2 55%, #F2F2F2 50%);
   position: relative; }
+  header .test {
+    display: none !important; }
   header .header-nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -557,9 +579,9 @@ header {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 20px 0 100px;
     margin-bottom: 50px; }
     header .header-nav .right .logo-wrapper {
@@ -642,7 +664,8 @@ header {
                 transform: translate3d(645px, 50px, 0px) !important;
         -webkit-animation: expand 5s infinite;
         /* Safari 4.0 - 8.0 */
-        animation: expand 5s infinite; }
+        animation: expand 5s infinite;
+        max-width: 200px; }
         header .header-nav .left .dropdown-menu a.dropdown-item {
           font-family: "Josefin Sans", sans-serif;
           font-size: 20px;
@@ -660,7 +683,8 @@ header {
                   justify-content: center;
           -webkit-transform: translate3d(645px, 50px, 0px) !important;
                   transform: translate3d(645px, 50px, 0px) !important;
-          width: 100%; }
+          width: 100%;
+          max-width: 180px; }
   header .scroll {
     position: absolute;
     -webkit-transform: rotate(90deg);
@@ -710,11 +734,11 @@ header {
 @media (max-width: 991.98px) {
   header {
     height: unset;
-    background-color: #9dffdc; }
+    background-color: #7BBF6A; }
     header .header-nav {
       padding: 20px;
       margin-bottom: 0;
-      background-color: #9dffdc; }
+      background-color: #7BBF6A; }
       header .header-nav .right {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -729,7 +753,7 @@ header {
               -ms-flex-pack: start;
                   justify-content: flex-start; }
       header .header-nav .left .dropdown-menu {
-        background-color: #9dffdc;
+        background-color: #7BBF6A;
         -webkit-transform: translate3d(0, -70px, 0px) !important;
                 transform: translate3d(0, -70px, 0px) !important;
         -webkit-animation: unset;
@@ -745,7 +769,7 @@ header {
     header .header-image {
       background-image: none;
       height: 100vh;
-      background-color: #9dffdc; }
+      background-color: #7BBF6A; }
       header .header-image h1 {
         width: 65%;
         background-color: transparent;
@@ -797,9 +821,11 @@ header {
       height: 100vh;
       background-size: cover;
       background-position: center center;
+      background-repeat: no-repeat;
       max-width: 330px;
       width: 100%;
-      height: 235px;
+      min-height: 235px;
+      height: 100%;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -824,12 +850,12 @@ header {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        height: 100%;
+        min-height: 200px;
         display: none;
         position: relative; }
         .portfolio-section .portfolio-content .portfolio-item .portfolio-info .portfolio-info-cta {
           position: absolute;
-          bottom: 40px;
+          bottom: 20px;
           margin-left: 20px; }
           .portfolio-section .portfolio-content .portfolio-item .portfolio-info .portfolio-info-cta a {
             color: #000;
@@ -880,7 +906,7 @@ header {
 
 @media (max-width: 991.98px) {
   .portfolio-section {
-    max-width: 320px;
+    max-width: 100%;
     height: unset; }
     .portfolio-section .portfolio-header {
       margin: 0 0 50px 0; }
@@ -890,11 +916,26 @@ header {
           -ms-flex-direction: column;
               flex-direction: column; }
       .portfolio-section .portfolio-content .portfolio-item {
-        max-width: 330px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        margin: 20px 0; } }
+        -o-object-fit: cover;
+           object-fit: cover;
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 300px;
+        width: 100%;
+        max-width: unset;
+        position: relative;
+        margin: 20px 0; }
+        .portfolio-section .portfolio-content .portfolio-item .portfolio-info {
+          height: 100%;
+          width: 50%;
+          padding: 0 20px;
+          -webkit-box-sizing: border-box;
+                  box-sizing: border-box;
+          position: absolute;
+          right: 0;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex; } }
 
 .contact-section .contact-wrapper {
   display: -webkit-box;
@@ -940,8 +981,6 @@ header {
     color: black;
     font-size: 20px;
     position: relative; }
-    .contact-section .contact-wrapper .contact-email:hover {
-      text-decoration: none; }
     .contact-section .contact-wrapper .contact-email .contact-underline {
       position: absolute;
       background-color: transparent;
@@ -950,27 +989,37 @@ header {
       -webkit-transition: all 1s;
       transition: all 1s;
       color: #fff; }
-    .contact-section .contact-wrapper .contact-email:hover .contact-underline {
-      position: absolute;
-      width: 200px;
-      width: 100%;
-      height: 1px;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      background-color: #000;
-      top: 100%; }
+    .contact-section .contact-wrapper .contact-email:hover {
+      text-decoration: none; }
+      .contact-section .contact-wrapper .contact-email:hover .contact-underline {
+        position: absolute;
+        width: 200px;
+        width: 100%;
+        height: 1px;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        background-color: #000;
+        top: 100%; }
 
 @media (max-width: 991.98px) {
   .contact-section .contact-wrapper {
-    max-width: 330px;
+    max-width: 420px;
     margin: 0 auto;
-    border: 10px solid #9dffdc; } }
+    border: 10px solid #7BBF6A; }
+    .contact-section .contact-wrapper .contact-email {
+      -webkit-transition: 2s;
+      transition: 2s; }
+      .contact-section .contact-wrapper .contact-email:hover {
+        text-transform: uppercase;
+        font-size: 16px; }
+        .contact-section .contact-wrapper .contact-email:hover .contact-underline {
+          display: none; } }
 
 footer {
-  margin: 100px 0; }
+  margin: 100px 0 0; }
   footer .footer-content {
-    max-width: 1390px;
+    width: 100%;
     min-height: 300px;
     height: 100%;
     background-color: #FAE2E2;
@@ -1039,10 +1088,17 @@ footer {
 
 @media (max-width: 991.98px) {
   footer {
-    margin: 50px 0 0; }
+    margin: 50px 0 0 0; }
     footer .footer-content {
       width: 100%;
       min-width: 320px;
-      background-color: #9dffdc; }
+      background-color: #7BBF6A; }
       footer .footer-content .footer-bottom {
-        max-width: 330px; } }
+        max-width: 330px; }
+        footer .footer-content .footer-bottom .social-container a {
+          -webkit-transition: 3s;
+          transition: 3s; }
+          footer .footer-content .footer-bottom .social-container a:hover {
+            text-decoration: underline; }
+            footer .footer-content .footer-bottom .social-container a:hover:after {
+              content: unset; } }
