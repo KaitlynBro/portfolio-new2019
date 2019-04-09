@@ -26,7 +26,6 @@ html {
 }
 
 body {
-	cursor:crosshair;
 	font-family: $josefin;
 	font-weight: 300;
 }
@@ -103,7 +102,7 @@ body {
 
 @include media-breakpoint-down(md) {
 	.services-wrapper {
-		padding:0 0 50px 0;
+		padding:50px 0 0;
 		.services {
 			flex-direction: column;
 			.left {
@@ -128,79 +127,73 @@ body {
 }
 
 .skills-section {
-	padding: 50px 0;
-    background:$pink;
-    max-width: 1390px;
-    width: 100%;
-    margin: 50px auto 0;
-	.skills-wrapper {
-		margin: 0 auto;
-		max-width: 1390px;
-		width:100%;
-		display: flex;
+	margin:50px 0;
+	background-color: $pink;
+	padding:50px 0;
+	h2 {
+		font-size: 18px;
+		color:$black;
+		font-family: "Josefin Sans", sans-serif;
+		text-transform: uppercase;
+		letter-spacing: 1.5px;
+		text-align: center;
+		margin-bottom: 50px;
 		position: relative;
-		align-items: center;
-		justify-content: flex-start;
-		position: relative;
-		h2 {
-			font-size: 18px;
-			color: $black;
-			font-family: $josefin;
-			text-transform: uppercase;
+		&:after {
+			content: "";
+			width: 50px;
+			height: 2px;
+			background-color:$black;
+			color:$black;
 			position: absolute;
-			right:140px;
-			width: 200px;
-			height: 140px;
-			background-color:$white;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			position: absolute;
-			letter-spacing: 1.5px;
-			&:after {
-				content: "";
-				width: 70px;
-				height: 2px;
-				background-color: $black;
-				color: $black;
-				position: absolute;
-				bottom:38px;
-			}
+			bottom: -20px;
+			left: 50%;
+			-webkit-transform: translate(-50%);
+			transform: translate(-50%);
 		}
-		.skill-col {
-			justify-content: center;
-			align-items: center;
+	}
+	.skills-content {
+		display:flex;
+		justify-content: center;
+		align-items: center;
+		.skills {
+			background-size: cover;
+			min-height: 300px;
+			border-radius: 50%;
+			max-width: 300px;
+			padding:0;
 			display: flex;
 			flex-direction: column;
-			padding:0;
-			&.animate {
-				position: absolute;
-				right: 250px;
-				top: 66%;
-				padding:0;
+			&.left {
+				align-items: flex-end;
+				margin-right: 100px;
 			}
-			.skill-item {
-				flex: 0 0 auto;
-				width: 130px;
-				height: 130px;
-				background-color: $white;
-				display: flex;
-				justify-content: center;
-				flex-direction: column;
-				align-items: center;
-				border-radius: 50%;
-				padding-top:2%;
-				border:none;
-				margin:20px;
-				text-align: center;
-				p {
-					margin: 10px 0 0px;
+			&.right {
+				align-items:flex-start;
+				margin-left: 100px;
+			}
+			&.middle {
+				background-image: url(../../assets/portfolio-pic.jpg);
+				background-size: 100vh;
+				max-width: 300px;
+				background-size: cover;
+				background-position: right;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	.skills-section {
+		margin:50px 0 0;
+		.skills-content {
+			flex-direction: column;
+			.skills {
+				&.left, &.right {
+					margin:0;
 				}
-				span {
-					img {
-						width: 40px;
-						height: 40px;
-					}
+				&.middle {
+					display: none;
 				}
 			}
 		}
@@ -280,20 +273,56 @@ body {
 		}
 	}
 	.about-social-container {
-		padding: 50px 0;
+		min-height: 200px;
+		align-items:center;
 		background: $pink;
 		max-width: 1390px;
 		width:100%;
 		margin:50px auto 0;
+		padding:50px 0;
 		display: flex;
-		flex-direction:row;
+		flex-direction:column;
 		justify-content: center;
 		transition:all 2s !important;
+		position: relative;
+		.skills-header {
+			text-transform: uppercase;
+			font-size: 18px;
+			color: $black;
+			h2 {
+				font-size: 18px;
+				color:$black;
+				font-family: $josefin;
+				text-transform: uppercase;
+				letter-spacing: 1.5px;
+				text-align: center;
+				margin-bottom: 50px;
+				position: relative;
+				&:after {
+					content: "";
+					width: 50px;
+					height: 2px;
+					background-color:$black;
+					position: absolute;
+					bottom: -20px;
+					left: 50%;
+					-webkit-transform: translate(-50%);
+					transform: translate(-50%);
+				}
+			}
+
+		}
+		.skills-list {
+			justify-content: center;
+			width: 100%;
+			display: flex;
+		}
 		.social {
 			display: flex;
 			justify-content: center;
 			align-content: center;
 			transition:all 2s !important;
+			padding:0;
 			.fab {
 				color: $black;
 				font-size: 45px;
@@ -359,7 +388,8 @@ body {
 				}
 			}
 			.about-me {
-				max-width: 560px;
+				max-width: unset;
+				padding: 0 20px;
 			}
 		}
 		.about-social-container {
@@ -428,6 +458,9 @@ body {
 					
 				}
 			}
+			.skills-list {
+				flex-direction: column;
+			}
 		}
 	}
 }
@@ -449,20 +482,16 @@ header {
 		.right {
 			.logo-wrapper {
 				display: flex;
-			    flex-direction: row;
-			    justify-content: center;
-			    position: relative;
+			    align-items:center;
+				justify-content: center;
+				width: 70px;
+				height: 70px;
+				border: 3px solid $black;
+				border-radius: 50%;
 			    .logo-letter {
 					font-size: 34px;
 					font-weight: 400;
-					top: 50%;
-					width: 70px;
-					height: 70px;
-					border: 3px solid $black;
-					border-radius: 50%;
-					display: flex;
-					justify-content: center;
-					align-items: center;
+
 			    }
 			    .logo-circle {
 			    	width:70px;
@@ -596,7 +625,7 @@ header {
 				padding:0;
 				.logo-wrapper {
 					padding: 0;
-					justify-content: flex-start;
+					justify-content: center;
 				}
 			}
 			.left {
@@ -654,7 +683,7 @@ header {
 		margin:50px 0 90px 0;
 		&:after {
 			content: "";
-			width: 150px;
+			width: 50px;
 			height: 2px;
 			background-color: $black;
 			color: $black;
@@ -818,7 +847,7 @@ header {
 			margin:10px 0;
 			&:after {
 				content: "";
-				width: 150px;
+				width: 50px;
 				height: 2px;
 				background-color: $black;
 				color: $black;
@@ -892,17 +921,16 @@ footer {
 		align-items:center;
 		.footer-top {
 			margin-bottom: 50px;
+			display: flex;
+			align-items:center;
+			justify-content: center;
+			width: 70px;
+			height: 70px;
+			border: 3px solid $black;
+			border-radius: 50%;
 			.logo-letter {
 				font-size: 34px;
 				font-weight: 400;
-				top: 50%;
-				width: 70px;
-				height: 70px;
-				border: 3px solid $black;
-				border-radius: 50%;
-				display: flex;
-				justify-content: center;
-				align-items: center;
 			}
 		}
 		.footer-bottom {
