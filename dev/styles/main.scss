@@ -186,11 +186,15 @@ body {
 @include media-breakpoint-down(sm) {
 	.skills-section {
 		margin:50px 0 0;
+		background-color:$green;
 		.skills-content {
 			flex-direction: column;
 			.skills {
 				&.left, &.right {
 					margin:0;
+					align-items: center;
+					justify-content: center;
+					font-size: 18px;
 				}
 				&.middle {
 					display: none;
@@ -466,13 +470,12 @@ body {
 }
 
 header {
-	height:100vh;
+	// min-height:100vh;
+	padding:0 0 100px 0;
 	background: rgb(250,226,226);
 	background: linear-gradient(50deg, $pink 55%, $lightgrey 50%);
 	position:relative; 
-	.test {
-		display:none !important;
-	}
+
 	.header-nav {
 		display: flex;
 		flex-direction:row;
@@ -532,31 +535,22 @@ header {
 				height:30px;
 				margin-left: 10px;
 			}
-			.dropdown-menu {
-				background-color:$pink;
-				border:unset;
-				transform:translate3d(645px, 50px, 0px) !important;
-				-webkit-animation: expand 5s infinite; /* Safari 4.0 - 8.0 */
-				animation: expand 5s infinite;
-				max-width:200px;
-				a.dropdown-item {
+			.menu {
+				flex-direction: row;
+				justify-content: flex-end;
+				display: flex;
+				a.menu-item {
 					font-family: $josefin;
 					font-size: 20px;
+					font-weight: 400;
+					margin:0 20px;
 					color: $black;
 					text-transform:uppercase;
 					letter-spacing: 0.5px;
 					&:hover {
 						background-color:$lightgrey;
-						cursor:crosshair;
+						text-decoration: unset;
 					}
-				}
-				&.show {
-					position: absolute;
-					top: 0px;
-					justify-content: center;
-					transform: translate3d(645px, 50px, 0px) !important;
-					width: 100%;
-					max-width: 180px;
 				}
 			}
 		}
@@ -615,29 +609,34 @@ header {
 	header {
 		height:unset;
 		background-color:$green;
+		padding:0;
 		.header-nav {
-			padding:20px;
+			padding:20px 0;
 			margin-bottom: 0;
 			background-color:$green;
+			flex-direction: row;
+			align-items:center;
 			.right {
 				display: flex;
 				justify-content: flex-start;
-				padding:0;
+				padding:0 30px;
 				.logo-wrapper {
 					padding: 0;
 					justify-content: center;
 				}
 			}
 			.left {
-				.dropdown-menu {
-					background-color:$green;
-					transform:translate3d(0, -70px, 0px) !important;
-					animation: unset;
-					&.show {
-						transform:translate3d(0px, 60px, 0) !important;
-						border:1px solid $black;
-						a:active {
-							background-color: $white;
+				justify-content:flex-end;
+				flex-direction: row;
+				padding:0;
+				.menu {
+					flex-direction: row;
+					justify-content: flex-end;
+					a.menu-item {
+						margin:0 5px;
+						font-size: 16px;
+						&:last-child {
+							margin-right:10px;
 						}
 					}
 				}

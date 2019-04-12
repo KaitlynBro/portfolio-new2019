@@ -1,3 +1,8 @@
-import 'bootstrap';
-import 'bootstrap/js/dist/util';
-import 'bootstrap/js/dist/dropdown';
+console.log('hi')
+$(document).ready(function() {
+    $("[href]").each(function() {
+        if (this.href == window.location.href) {
+            $(this).addClass("active");
+        }
+    });
+});
