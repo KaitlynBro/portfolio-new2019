@@ -470,7 +470,6 @@ body {
 }
 
 header {
-	// min-height:100vh;
 	padding:0 0 100px 0;
 	background: rgb(250,226,226);
 	background: linear-gradient(50deg, $pink 55%, $lightgrey 50%);
@@ -619,7 +618,7 @@ header {
 			.right {
 				display: flex;
 				justify-content: flex-start;
-				padding:0 30px;
+				padding:0 10px;
 				.logo-wrapper {
 					padding: 0;
 					justify-content: center;
