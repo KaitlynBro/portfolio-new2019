@@ -37,13 +37,13 @@ body {
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
-		max-width: 1400px;
+		max-width: 1300px;
 		margin: 0 auto;
 		.left {
 			background-size: cover;
 			background-repeat: no-repeat;
 			position: relative;
-			background-image:url('../../assets/services-bg.jpg');
+			background-image:url('../../assets/test.jpg');
 			min-height: 656px;
     		max-width: 700px;
 			.services-title {
@@ -82,7 +82,11 @@ body {
 				.icon-wrapper {
 					margin-right: 20px;
 					border: 1px solid $red;
-					padding: 20px;
+					width: 70px;
+					height: 70px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
 					.fas {
 						font-size: 25px;
 					}
@@ -128,7 +132,7 @@ body {
 
 .skills-section {
 	margin:50px 0;
-	background-color: $pink;
+	background-color: $green;
 	padding:50px 0;
 	h2 {
 		font-size: 18px;
@@ -205,7 +209,7 @@ body {
 }
 
 .about-wrapper {
-	padding:50px 0;
+	padding:15px 0;
 	.about-content {
 		margin:0 auto;
 		max-width:975px;
@@ -215,7 +219,6 @@ body {
 		}
 		.about-header.small {
 			font-size:16px;
-			color:$darkpink;
 			text-transform: uppercase;
 			line-height: 24px;
 			margin-right:10px;
@@ -230,17 +233,18 @@ body {
 		.about-bg {
 			font-size: 16px;
 			line-height: 18px;
-			color: $white;
+			color: $black;
 			text-transform: uppercase;
 			letter-spacing: 2px;
-			background-color:$black;
+			background-color:$green;
 			padding:10px 60px 8px;
+			font-weight: 400;
 			span.f {
 				position:relative;
 				&:before {
 					content: "";
 					position: absolute;
-					background: $black;
+					background: $green;
 					height: 3px;
 					width: 100px;
 					left: -120px;
@@ -252,7 +256,7 @@ body {
 				&:before {
 					content: "";
 					position: absolute;
-					background: $black;
+					background: $green;
 					height: 3px;
 					width: 100px;
 					right: -120px;
@@ -274,13 +278,32 @@ body {
 					margin-bottom: 20px;
 				}
 			}
+			.about-companies-wrapper {
+				padding: 20px;
+				background-color:$green;
+				.about-text {
+					font-size: 18px;
+					margin:0;
+				}
+				.about-companies {
+					justify-content: space-around;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					.company-logo {
+						max-width: 150px;
+						&:first-of-type {
+							max-width: 100px;
+						}
+					}
+				}
+			}
 		}
 	}
 	.about-social-container {
 		min-height: 200px;
 		align-items:center;
 		background: $pink;
-		max-width: 1390px;
 		width:100%;
 		margin:50px auto 0;
 		padding:50px 0;
@@ -366,7 +389,11 @@ body {
 		}
 	}
 }
-
+@include media-breakpoint-down(lg) {
+	.about-social-container .skills-list {
+		flex-wrap: wrap;
+	}
+}
 @include media-breakpoint-down(md) {
 	.about-wrapper {
 		padding:50px 0;
@@ -470,40 +497,24 @@ body {
 }
 
 header {
-	padding:0 0 100px 0;
-	background: rgb(250,226,226);
-	background: linear-gradient(50deg, $pink 55%, $lightgrey 50%);
+	padding:30px;
 	position:relative; 
 
 	.header-nav {
 		display: flex;
 		flex-direction:row;
 		justify-content: space-between;
-		padding:20px 0 100px;
-		margin-bottom: 50px;
+		padding:0;
 		.right {
-			.logo-wrapper {
-				display: flex;
-			    align-items:center;
-				justify-content: center;
-				width: 70px;
-				height: 70px;
-				border: 3px solid $black;
-				border-radius: 50%;
-			    .logo-letter {
-					font-size: 34px;
-					font-weight: 400;
-
-			    }
-			    .logo-circle {
-			    	width:70px;
-			    	height:70px;
-			    }
+			.logo {
+				max-width:150px;
 			}
 		}
 		.left {
 			display: flex;
 			justify-content: flex-end;
+			align-items: center;
+			padding:0;
 			.menu-btn {
 				background-color: unset;
 				color:$black;
@@ -542,13 +553,31 @@ header {
 					font-family: $josefin;
 					font-size: 20px;
 					font-weight: 400;
-					margin:0 20px;
 					color: $black;
 					text-transform:uppercase;
 					letter-spacing: 0.5px;
+					position: relative;
+					&:not(:last-of-type) {
+						margin:0 20px;
+					}
+					&:before {
+						content: '';
+						position: absolute;
+						bottom:-5px;
+						left: 0;
+						right: 0;
+						height: 2px;
+						background-color: #000;
+						transform-origin: bottom right;
+						transform: scaleX(0);
+						transition: transform 0.5s ease;
+					}
 					&:hover {
-						background-color:$lightgrey;
-						text-decoration: unset;
+						text-decoration: none;
+						&:before {
+							transform-origin: bottom left;
+							transform: scaleX(1);
+						}
 					}
 				}
 			}
@@ -557,8 +586,8 @@ header {
 	.scroll {
 		position: absolute;
 		transform:rotate(90deg);
-		right:0;
-		bottom:160px;
+		right: 30px;
+		bottom: 190px;
 		p {
 			color: $black;
 			font-size:20px;
@@ -574,45 +603,26 @@ header {
 		} 
 	}
 	.header-image {
-		background-image:url('../../assets/header-image.jpg');
+		background-image:url('../../assets/icon-7.jpg');
 		background-repeat: no-repeat;
-		max-width: 850px;
-		height: 600px;
 	    background-attachment: fixed;
 	    margin: 0 auto;
-	    position: relative;
-	    transition:all 1s;
-	    h1 {
-	    	position: absolute;
-	    	top: -22%;
-	    	left: 0%;
-    	    font-size: 50px;
-    	    width: 60%;
-    	    font-weight: 200;
-    	    margin: 0 auto;
-    	    transition:all 1s;
-    	    &:before {
-    	    	content: "";
-	    	    position: absolute;
-	    	    background-color: $black;
-	    	    width: 100px;
-	    	    height: 5px;
-	    	    left: -110px;
-	    	    top: 26%;
-    	    }
-	    }
+		position: relative;
+		transition:all 1s;
+		background-size: cover;
+		background-position: 20% 20%;
+		height: 80vh;
 	}
 }
 
 @include media-breakpoint-down(md) {
 	header {
 		height:unset;
-		background-color:$green;
 		padding:0;
 		.header-nav {
 			padding:20px 0;
 			margin-bottom: 0;
-			background-color:$green;
+			background-color:$white;
 			flex-direction: row;
 			align-items:center;
 			.right {
@@ -645,23 +655,43 @@ header {
 			bottom: 240px;
 		}
 		.header-image {
-			background-image: none;
-			height:100vh;
-			background-color:$green;
-			h1 {
-				width: 65%;
-				background-color: transparent;
-				padding:30px;
-				font-size: 40px;
-				border:none;
-				top: 15%;
-				color: $black;
-				left: 50%;
-				transform: translate(-50%);
-				&:before {
-					content: none;
+			height:80vh;
+		}
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	header {
+		.header-nav {
+			position: fixed;
+    		bottom: 0;
+			z-index: 999999;
+			align-items:flex-end;
+			.right {
+				.logo-wrapper img {
+					max-width: 100px;
 				}
 			}
+			.left .menu a.menu-item:not(:last-of-type) {
+				margin:0 5px;
+			}
+			.left .menu a.menu-item:last-of-type {
+				margin-right:5px;
+			}
+			.left .menu a.menu-item {
+				transition:1s;
+				&:hover {
+					background-color: $green;
+					padding:0 3px;
+				}
+			}
+		}
+		.scroll {
+			bottom: 140px;
+			right:0;
+		}
+		.header-image {
+			height:50vh;
 		}
 	}
 }
@@ -781,6 +811,14 @@ header {
 			}
 			&:nth-child(5) {
 				background-image: url('../../assets/makeup.jpg');
+				&:hover {
+					.portfolio-info {
+						display: flex;
+					}
+				}
+			}
+			&:nth-child(6) {
+				background-image: url('../../assets/gorib.jpg');
 				&:hover {
 					.portfolio-info {
 						display: flex;
@@ -917,19 +955,8 @@ footer {
 		flex-direction: column;
 		justify-content: center;
 		align-items:center;
-		.footer-top {
-			margin-bottom: 50px;
-			display: flex;
-			align-items:center;
-			justify-content: center;
-			width: 70px;
-			height: 70px;
-			border: 3px solid $black;
-			border-radius: 50%;
-			.logo-letter {
-				font-size: 34px;
-				font-weight: 400;
-			}
+		.footer-top .logo {
+			width:150px;
 		}
 		.footer-bottom {
 			width:100%;
