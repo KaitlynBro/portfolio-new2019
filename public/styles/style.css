@@ -356,7 +356,7 @@ body {
           margin-top: 40px;
           margin-bottom: 20px; }
       .about-wrapper .about-content .about-me .about-companies-wrapper {
-        padding: 20px;
+        padding: 40px 20px 20px;
         background-color: #acc6aa; }
         .about-wrapper .about-content .about-me .about-companies-wrapper .about-text {
           font-size: 18px;
@@ -369,7 +369,8 @@ body {
           .about-wrapper .about-content .about-me .about-companies-wrapper .about-companies .company-logo {
             max-width: 150px; }
             .about-wrapper .about-content .about-me .about-companies-wrapper .about-companies .company-logo:first-of-type {
-              max-width: 100px; }
+              max-width: 150px;
+              margin-bottom: 10px; }
   .about-wrapper .about-social-container {
     min-height: 200px;
     align-items: center;
@@ -447,6 +448,8 @@ body {
 
 @media (max-width: 1199.98px) {
   .about-social-container .skills-list {
+    flex-wrap: wrap; }
+  .about-companies-wrapper .about-companies {
     flex-wrap: wrap; } }
 
 @media (max-width: 991.98px) {
@@ -681,7 +684,7 @@ header {
     letter-spacing: 1.5px;
     text-align: center;
     position: relative;
-    margin: 50px 0 90px 0; }
+    margin: 50px 0 70px 0; }
     .portfolio-section .portfolio-header:after {
       content: "";
       width: 50px;
@@ -693,78 +696,50 @@ header {
       left: 50%;
       transform: translate(-50%); }
   .portfolio-section .portfolio-content {
-    display: flex;
-    justify-content: center;
     width: 100%;
     padding: 0; }
-    .portfolio-section .portfolio-content .portfolio-item {
-      height: 100vh;
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
-      max-width: 330px;
-      width: 100%;
-      min-height: 235px;
-      height: 100%;
+    .portfolio-section .portfolio-content .portfolio-top {
       display: flex;
-      margin: 0 2px;
-      align-items: flex-end;
-      filter: sepia(30%); }
-      .portfolio-section .portfolio-content .portfolio-item .portfolio-info {
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap; }
+      .portfolio-section .portfolio-content .portfolio-top a {
+        opacity: 0;
+        transition: 0.5s;
+        margin: 0;
+        position: absolute;
+        bottom: 0;
         width: 100%;
-        background-color: #121212;
-        opacity: 0.9;
-        width: 100%;
-        justify-content: center;
-        flex-direction: column;
-        display: flex;
-        min-height: 200px;
-        display: none;
+        font-size: 30px;
+        text-decoration: none;
+        margin: 0;
+        text-align: center;
+        padding: 5px;
+        color: #000;
+        font-weight: 300; }
+      .portfolio-section .portfolio-content .portfolio-top .big {
+        width: 70%;
         position: relative; }
-        .portfolio-section .portfolio-content .portfolio-item .portfolio-info .portfolio-info-cta {
-          position: absolute;
-          bottom: 20px;
-          margin-left: 20px; }
-          .portfolio-section .portfolio-content .portfolio-item .portfolio-info .portfolio-info-cta a {
-            color: #000;
-            background-color: #fff;
-            padding: 10px 20px;
-            font-size: 16px;
-            text-transform: lowercase; }
-        .portfolio-section .portfolio-content .portfolio-item .portfolio-info h3, .portfolio-section .portfolio-content .portfolio-item .portfolio-info p {
-          font-size: 16px;
-          color: #fff;
-          margin-left: 20px;
-          max-width: 300px; }
-        .portfolio-section .portfolio-content .portfolio-item .portfolio-info h3 {
-          text-transform: uppercase; }
-        .portfolio-section .portfolio-content .portfolio-item .portfolio-info p {
-          text-transform: lowercase;
-          margin-bottom: 0; }
-      .portfolio-section .portfolio-content .portfolio-item:first-of-type {
-        background-image: url("../../assets/knix.jpg"); }
-        .portfolio-section .portfolio-content .portfolio-item:first-of-type:hover .portfolio-info {
-          display: flex; }
-      .portfolio-section .portfolio-content .portfolio-item:nth-child(2) {
-        background-image: url("../../assets/knixteen.jpg"); }
-        .portfolio-section .portfolio-content .portfolio-item:nth-child(2):hover .portfolio-info {
-          display: flex; }
-      .portfolio-section .portfolio-content .portfolio-item:nth-child(3) {
-        background-image: url("../../assets/apollo.jpg"); }
-        .portfolio-section .portfolio-content .portfolio-item:nth-child(3):hover .portfolio-info {
-          display: flex; }
-      .portfolio-section .portfolio-content .portfolio-item:nth-of-type(4) {
-        background-image: url("../../assets/mias.jpg"); }
-        .portfolio-section .portfolio-content .portfolio-item:nth-of-type(4):hover .portfolio-info {
-          display: flex; }
-      .portfolio-section .portfolio-content .portfolio-item:nth-child(5) {
-        background-image: url("../../assets/makeup.jpg"); }
-        .portfolio-section .portfolio-content .portfolio-item:nth-child(5):hover .portfolio-info {
-          display: flex; }
-      .portfolio-section .portfolio-content .portfolio-item:nth-child(6) {
-        background-image: url("../../assets/gorib.jpg"); }
-        .portfolio-section .portfolio-content .portfolio-item:nth-child(6):hover .portfolio-info {
-          display: flex; }
+        .portfolio-section .portfolio-content .portfolio-top .big img {
+          width: 100%;
+          height: 500px;
+          object-fit: cover; }
+        .portfolio-section .portfolio-content .portfolio-top .big:hover a {
+          opacity: 8;
+          background-color: #acc6aa; }
+      .portfolio-section .portfolio-content .portfolio-top .small {
+        width: 30%;
+        height: 100%; }
+        .portfolio-section .portfolio-content .portfolio-top .small .small-image {
+          height: 50%;
+          position: relative; }
+          .portfolio-section .portfolio-content .portfolio-top .small .small-image img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover; }
+          .portfolio-section .portfolio-content .portfolio-top .small .small-image:hover a {
+            opacity: 8;
+            background-color: #acc6aa; }
 
 @media (max-width: 991.98px) {
   .portfolio-section {

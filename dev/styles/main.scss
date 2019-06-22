@@ -279,7 +279,7 @@ body {
 				}
 			}
 			.about-companies-wrapper {
-				padding: 20px;
+				padding: 40px 20px 20px;
 				background-color:$green;
 				.about-text {
 					font-size: 18px;
@@ -293,7 +293,8 @@ body {
 					.company-logo {
 						max-width: 150px;
 						&:first-of-type {
-							max-width: 100px;
+							max-width: 150px;
+							margin-bottom: 10px;
 						}
 					}
 				}
@@ -392,6 +393,11 @@ body {
 @include media-breakpoint-down(lg) {
 	.about-social-container .skills-list {
 		flex-wrap: wrap;
+	}
+	.about-companies-wrapper {
+		.about-companies {
+			flex-wrap: wrap;
+		}
 	}
 }
 @include media-breakpoint-down(md) {
@@ -708,7 +714,7 @@ header {
 		letter-spacing: 1.5px;
 		text-align: center;
 		position: relative;
-		margin:50px 0 90px 0;
+		margin:50px 0 70px 0;
 		&:after {
 			content: "";
 			width: 50px;
@@ -722,110 +728,163 @@ header {
 		}
 	}
 	.portfolio-content {
-		display: flex;
-		justify-content: center;
 		width:100%;
 		padding:0;
-		.portfolio-item {
-			height:100vh;
-			background-size: cover;
-			background-position: center center;
-			background-repeat: no-repeat;
-			max-width: 330px;
-			width:100%;
-			min-height: 235px;
-			height: 100%;
+		.portfolio-top {
 			display:flex;
-			margin:0 2px;
-			align-items: flex-end;
-			filter:sepia(30%);
-			.portfolio-info {
-				width:100%;
-				background-color: #121212;
-				opacity: 0.9;
-				width:100%;
-				justify-content: center;
-				flex-direction: column;
-				display: flex;
-				min-height:200px;
-				display:none;
-				position:relative;
-				.portfolio-info-cta {
-					position: absolute;
-					bottom: 20px;
-					margin-left: 20px;
+			justify-content: center;
+			align-items: center;
+			flex-wrap:wrap;
+			a {
+				opacity: 0;
+				transition: 0.5s;
+				margin:0;
+				position: absolute;
+				bottom:0;
+				width: 100%;
+				font-size: 30px;
+				text-decoration: none;
+				margin: 0;
+				text-align: center;
+				padding: 5px;
+				color: $black;
+				font-weight: 300;
+			}
+			.big {
+				width: 70%;
+				position: relative;
+				img {
+					width: 100%;
+					height: 500px;
+					object-fit: cover;
+				}
+				&:hover {
 					a {
-						color: $black;
-						background-color: $white;
-						padding:10px 20px;
-						font-size: 16px;
-						text-transform: lowercase;
-
-					}
-				}
-				h3, p {
-					font-size:16px;
-					color: $white;
-					margin-left:20px;
-					max-width:300px;
-				}
-				h3 {
-					text-transform: uppercase;
-				}
-				p {
-					text-transform: lowercase;
-					margin-bottom:0;
-				}
-			}
-			&:first-of-type {
-				background-image: url('../../assets/knix.jpg');
-				&:hover {
-					.portfolio-info {
-						display: flex;
+						opacity:8;
+						background-color: $green;
 					}
 				}
 			}
-			&:nth-child(2) {
-				background-image: url('../../assets/knixteen.jpg');
-				&:hover {
-					.portfolio-info {
-						display: flex;
+			.small {
+				width:30%;
+				height:100%;
+				.small-image {
+					height:50%;
+					position: relative;
+					img {
+						width:100%;
+						height: 250px;
+						object-fit: cover;
 					}
-				}
-			}
-			&:nth-child(3) {
-				background-image: url('../../assets/apollo.jpg');
-				&:hover {
-					.portfolio-info {
-						display: flex;
-					}
-				}
-			}
-			&:nth-of-type(4) {
-				background-image: url('../../assets/mias.jpg');
-				&:hover {
-					.portfolio-info {
-						display: flex;
-					}
-				}
-			}
-			&:nth-child(5) {
-				background-image: url('../../assets/makeup.jpg');
-				&:hover {
-					.portfolio-info {
-						display: flex;
-					}
-				}
-			}
-			&:nth-child(6) {
-				background-image: url('../../assets/gorib.jpg');
-				&:hover {
-					.portfolio-info {
-						display: flex;
+					&:hover {
+						a {
+							opacity:8;
+							background-color: $green;
+						}
 					}
 				}
 			}
 		}
+		// .portfolio-item {
+		// 	height:100vh;
+		// 	background-size: cover;
+		// 	background-position: center center;
+		// 	background-repeat: no-repeat;
+		// 	max-width: 330px;
+		// 	width:100%;
+		// 	min-height: 235px;
+		// 	height: 100%;
+		// 	display:flex;
+		// 	margin:0 2px;
+		// 	align-items: flex-end;
+		// 	filter:sepia(30%);
+		// 	.portfolio-info {
+		// 		width:100%;
+		// 		background-color: #121212;
+		// 		opacity: 0.9;
+		// 		width:100%;
+		// 		justify-content: center;
+		// 		flex-direction: column;
+		// 		display: flex;
+		// 		min-height:200px;
+		// 		display:none;
+		// 		position:relative;
+		// 		.portfolio-info-cta {
+		// 			position: absolute;
+		// 			bottom: 20px;
+		// 			margin-left: 20px;
+		// 			a {
+		// 				color: $black;
+		// 				background-color: $white;
+		// 				padding:10px 20px;
+		// 				font-size: 16px;
+		// 				text-transform: lowercase;
+
+		// 			}
+		// 		}
+		// 		h3, p {
+		// 			font-size:16px;
+		// 			color: $white;
+		// 			margin-left:20px;
+		// 			max-width:300px;
+		// 		}
+		// 		h3 {
+		// 			text-transform: uppercase;
+		// 		}
+		// 		p {
+		// 			text-transform: lowercase;
+		// 			margin-bottom:0;
+		// 		}
+		// 	}
+		// 	&:first-of-type {
+		// 		background-image: url('../../assets/knix.jpg');
+		// 		&:hover {
+		// 			.portfolio-info {
+		// 				display: flex;
+		// 			}
+		// 		}
+		// 	}
+		// 	&:nth-child(2) {
+		// 		background-image: url('../../assets/knixteen.jpg');
+		// 		&:hover {
+		// 			.portfolio-info {
+		// 				display: flex;
+		// 			}
+		// 		}
+		// 	}
+		// 	&:nth-child(3) {
+		// 		background-image: url('../../assets/apollo.jpg');
+		// 		&:hover {
+		// 			.portfolio-info {
+		// 				display: flex;
+		// 			}
+		// 		}
+		// 	}
+		// 	&:nth-of-type(4) {
+		// 		background-image: url('../../assets/mias.jpg');
+		// 		&:hover {
+		// 			.portfolio-info {
+		// 				display: flex;
+		// 			}
+		// 		}
+		// 	}
+		// 	&:nth-child(5) {
+		// 		background-image: url('../../assets/makeup.jpg');
+		// 		&:hover {
+		// 			.portfolio-info {
+		// 				display: flex;
+		// 			}
+		// 		}
+		// 	}
+		// 	&:nth-child(6) {
+		// 		background-image: url('../../assets/gorib.jpg');
+		// 		&:hover {
+		// 			.portfolio-info {
+		// 				display: flex;
+		// 			}
+		// 		}
+		// 	}
+		// }
 	}
 }
 
