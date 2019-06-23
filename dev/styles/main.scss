@@ -44,8 +44,8 @@ body {
 			background-repeat: no-repeat;
 			position: relative;
 			background-image:url('../../assets/test.jpg');
-			min-height: 656px;
-    		max-width: 700px;
+			min-height: 555px;
+			max-width: 600px;
 			.services-title {
 				font-size: 18px;
 				color: $black;
@@ -78,12 +78,13 @@ body {
 				display:flex;
 				flex-direction: row;
 				align-items: center;
-				margin:50px 65px;
+				margin: 50px 0;
 				.icon-wrapper {
 					margin-right: 20px;
 					border: 1px solid $red;
 					width: 70px;
 					height: 70px;
+					padding:10px;
 					display: flex;
 					justify-content: center;
 					align-items: center;
@@ -92,12 +93,28 @@ body {
 					}
 				}
 				.service-name {
+					max-width: 330px;
 					h2 {
 						font-family: $josefin;
 						font-size: 24px;
 						color: $black;
 						font-weight: 300;
 					}
+				}
+			}
+		}
+	}
+	&.process {
+		.services .left {
+			background-image:url('../../assets/trees.jpg');
+		}
+		.services .right {
+			.icon-wrapper {
+				border:1px solid $green;
+			}
+			.service-name {
+				p,h2 {
+					margin:0;
 				}
 			}
 		}
@@ -785,135 +802,28 @@ header {
 				}
 			}
 		}
-		// .portfolio-item {
-		// 	height:100vh;
-		// 	background-size: cover;
-		// 	background-position: center center;
-		// 	background-repeat: no-repeat;
-		// 	max-width: 330px;
-		// 	width:100%;
-		// 	min-height: 235px;
-		// 	height: 100%;
-		// 	display:flex;
-		// 	margin:0 2px;
-		// 	align-items: flex-end;
-		// 	filter:sepia(30%);
-		// 	.portfolio-info {
-		// 		width:100%;
-		// 		background-color: #121212;
-		// 		opacity: 0.9;
-		// 		width:100%;
-		// 		justify-content: center;
-		// 		flex-direction: column;
-		// 		display: flex;
-		// 		min-height:200px;
-		// 		display:none;
-		// 		position:relative;
-		// 		.portfolio-info-cta {
-		// 			position: absolute;
-		// 			bottom: 20px;
-		// 			margin-left: 20px;
-		// 			a {
-		// 				color: $black;
-		// 				background-color: $white;
-		// 				padding:10px 20px;
-		// 				font-size: 16px;
-		// 				text-transform: lowercase;
-
-		// 			}
-		// 		}
-		// 		h3, p {
-		// 			font-size:16px;
-		// 			color: $white;
-		// 			margin-left:20px;
-		// 			max-width:300px;
-		// 		}
-		// 		h3 {
-		// 			text-transform: uppercase;
-		// 		}
-		// 		p {
-		// 			text-transform: lowercase;
-		// 			margin-bottom:0;
-		// 		}
-		// 	}
-		// 	&:first-of-type {
-		// 		background-image: url('../../assets/knix.jpg');
-		// 		&:hover {
-		// 			.portfolio-info {
-		// 				display: flex;
-		// 			}
-		// 		}
-		// 	}
-		// 	&:nth-child(2) {
-		// 		background-image: url('../../assets/knixteen.jpg');
-		// 		&:hover {
-		// 			.portfolio-info {
-		// 				display: flex;
-		// 			}
-		// 		}
-		// 	}
-		// 	&:nth-child(3) {
-		// 		background-image: url('../../assets/apollo.jpg');
-		// 		&:hover {
-		// 			.portfolio-info {
-		// 				display: flex;
-		// 			}
-		// 		}
-		// 	}
-		// 	&:nth-of-type(4) {
-		// 		background-image: url('../../assets/mias.jpg');
-		// 		&:hover {
-		// 			.portfolio-info {
-		// 				display: flex;
-		// 			}
-		// 		}
-		// 	}
-		// 	&:nth-child(5) {
-		// 		background-image: url('../../assets/makeup.jpg');
-		// 		&:hover {
-		// 			.portfolio-info {
-		// 				display: flex;
-		// 			}
-		// 		}
-		// 	}
-		// 	&:nth-child(6) {
-		// 		background-image: url('../../assets/gorib.jpg');
-		// 		&:hover {
-		// 			.portfolio-info {
-		// 				display: flex;
-		// 			}
-		// 		}
-		// 	}
-		// }
 	}
 }
 
 @include media-breakpoint-down(md) {
 	.portfolio-section {
-		max-width: 100%;
-		height:unset;
-		.portfolio-header {
-			margin:0 0 50px 0;
-		}
 		.portfolio-content {
-			flex-direction: column;
-			.portfolio-item {
-				object-fit: cover;
-				background-size: cover;
-				background-repeat: no-repeat;
-				min-height: 300px;
-				width: 100%;
-				max-width: unset;
-				position: relative;
-				margin:20px 0;
-				.portfolio-info {
-					height: 100%;
-					width: 50%;
-					padding: 0 20px;
-					box-sizing: border-box;
-					position: absolute;
-					right: 0;
+			.portfolio-top {
+				flex-wrap: nowrap;
+    			flex-direction: column;
+				.big {
+					width: 100%;
+					img {
+						height: unset;
+					}
+				}
+				.small {
+					flex-direction: row;
 					display: flex;
+					width: 100%;
+					.small-image {
+						width: 100%;
+					}
 				}
 			}
 		}

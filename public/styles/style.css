@@ -170,8 +170,8 @@ body {
       background-repeat: no-repeat;
       position: relative;
       background-image: url("../../assets/test.jpg");
-      min-height: 656px;
-      max-width: 700px; }
+      min-height: 555px;
+      max-width: 600px; }
       .services-wrapper .services .left .services-title {
         font-size: 18px;
         color: #000;
@@ -200,22 +200,31 @@ body {
       display: flex;
       flex-direction: row;
       align-items: center;
-      margin: 50px 65px; }
+      margin: 50px 0; }
       .services-wrapper .services .right .service-item .icon-wrapper {
         margin-right: 20px;
         border: 1px solid #ed879f;
         width: 70px;
         height: 70px;
+        padding: 10px;
         display: flex;
         justify-content: center;
         align-items: center; }
         .services-wrapper .services .right .service-item .icon-wrapper .fas {
           font-size: 25px; }
-      .services-wrapper .services .right .service-item .service-name h2 {
-        font-family: "Josefin Sans", sans-serif;
-        font-size: 24px;
-        color: #000;
-        font-weight: 300; }
+      .services-wrapper .services .right .service-item .service-name {
+        max-width: 330px; }
+        .services-wrapper .services .right .service-item .service-name h2 {
+          font-family: "Josefin Sans", sans-serif;
+          font-size: 24px;
+          color: #000;
+          font-weight: 300; }
+  .services-wrapper.process .services .left {
+    background-image: url("../../assets/trees.jpg"); }
+  .services-wrapper.process .services .right .icon-wrapper {
+    border: 1px solid #acc6aa; }
+  .services-wrapper.process .services .right .service-name p, .services-wrapper.process .services .right .service-name h2 {
+    margin: 0; }
 
 @media (max-width: 991.98px) {
   .services-wrapper {
@@ -742,30 +751,19 @@ header {
             background-color: #acc6aa; }
 
 @media (max-width: 991.98px) {
-  .portfolio-section {
-    max-width: 100%;
-    height: unset; }
-    .portfolio-section .portfolio-header {
-      margin: 0 0 50px 0; }
-    .portfolio-section .portfolio-content {
-      flex-direction: column; }
-      .portfolio-section .portfolio-content .portfolio-item {
-        object-fit: cover;
-        background-size: cover;
-        background-repeat: no-repeat;
-        min-height: 300px;
-        width: 100%;
-        max-width: unset;
-        position: relative;
-        margin: 20px 0; }
-        .portfolio-section .portfolio-content .portfolio-item .portfolio-info {
-          height: 100%;
-          width: 50%;
-          padding: 0 20px;
-          box-sizing: border-box;
-          position: absolute;
-          right: 0;
-          display: flex; } }
+  .portfolio-section .portfolio-content .portfolio-top {
+    flex-wrap: nowrap;
+    flex-direction: column; }
+    .portfolio-section .portfolio-content .portfolio-top .big {
+      width: 100%; }
+      .portfolio-section .portfolio-content .portfolio-top .big img {
+        height: unset; }
+    .portfolio-section .portfolio-content .portfolio-top .small {
+      flex-direction: row;
+      display: flex;
+      width: 100%; }
+      .portfolio-section .portfolio-content .portfolio-top .small .small-image {
+        width: 100%; } }
 
 .contact-section .contact-wrapper {
   display: flex;
