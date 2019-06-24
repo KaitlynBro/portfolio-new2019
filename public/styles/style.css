@@ -162,9 +162,10 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin: 0 auto;
+    justify-content: space-evenly;
     align-items: center;
-    max-width: 1300px;
-    margin: 0 auto; }
+    max-width: 1400px; }
     .services-wrapper .services .left {
       background-size: cover;
       background-repeat: no-repeat;
@@ -225,6 +226,8 @@ body {
     border: 1px solid #acc6aa; }
   .services-wrapper.process .services .right .service-name p, .services-wrapper.process .services .right .service-name h2 {
     margin: 0; }
+  .services-wrapper.process .services .right .service-item .far, .services-wrapper.process .services .right .service-item .fas {
+    font-size: 25px; }
 
 @media (max-width: 991.98px) {
   .services-wrapper {
@@ -308,7 +311,7 @@ body {
   padding: 15px 0; }
   .about-wrapper .about-content {
     margin: 0 auto;
-    max-width: 975px;
+    max-width: 1055px;
     text-align: center; }
     .about-wrapper .about-content .about-header, .about-wrapper .about-content .about-bg {
       font-family: "Josefin Sans", sans-serif; }
@@ -371,7 +374,7 @@ body {
           font-size: 18px;
           margin: 0; }
         .about-wrapper .about-content .about-me .about-companies-wrapper .about-companies {
-          justify-content: space-around;
+          justify-content: space-evenly;
           display: flex;
           flex-direction: row;
           align-items: center; }
@@ -380,6 +383,11 @@ body {
             .about-wrapper .about-content .about-me .about-companies-wrapper .about-companies .company-logo:first-of-type {
               max-width: 150px;
               margin-bottom: 10px; }
+          .about-wrapper .about-content .about-me .about-companies-wrapper .about-companies p {
+            margin-bottom: -5px;
+            text-transform: uppercase;
+            white-space: nowrap;
+            font-weight: 400; }
   .about-wrapper .about-social-container {
     min-height: 200px;
     align-items: center;
@@ -682,7 +690,7 @@ header {
     height: 50vh; } }
 
 .portfolio-section {
-  padding: 50px 0;
+  padding: 10px 0;
   width: 100%;
   margin: 0 auto; }
   .portfolio-section .portfolio-header {
@@ -799,23 +807,22 @@ header {
     color: black;
     font-size: 20px;
     position: relative; }
-    .contact-section .contact-wrapper .contact-email .contact-underline {
+    .contact-section .contact-wrapper .contact-email:before {
+      content: '';
       position: absolute;
-      background-color: transparent;
-      padding: 0;
-      font-size: 0;
-      transition: all 1s;
-      color: #fff; }
+      bottom: -5px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: #000;
+      transform-origin: bottom right;
+      transform: scaleX(0);
+      transition: transform 0.5s ease; }
     .contact-section .contact-wrapper .contact-email:hover {
       text-decoration: none; }
-      .contact-section .contact-wrapper .contact-email:hover .contact-underline {
-        position: absolute;
-        width: 200px;
-        width: 100%;
-        height: 1px;
-        justify-content: center;
-        background-color: #000;
-        top: 100%; }
+      .contact-section .contact-wrapper .contact-email:hover:before {
+        transform-origin: bottom left;
+        transform: scaleX(1); }
 
 @media (max-width: 991.98px) {
   .contact-section .contact-wrapper {
@@ -854,18 +861,22 @@ footer {
         font-size: 18px;
         text-decoration: none;
         position: relative; }
-        footer .footer-content .footer-bottom a:hover {
-          transition: all 3s ease; }
-        footer .footer-content .footer-bottom a:after {
-          transition: all 3s ease; }
-        footer .footer-content .footer-bottom a:hover:after {
-          content: "";
+        footer .footer-content .footer-bottom a:before {
+          content: '';
           position: absolute;
-          width: 100%;
-          transform: translate(-50%);
-          left: 50%;
+          bottom: -5px;
+          left: 0;
+          right: 0;
           height: 2px;
-          background-color: #000; }
+          background-color: #000;
+          transform-origin: bottom right;
+          transform: scaleX(0);
+          transition: transform 0.5s ease; }
+        footer .footer-content .footer-bottom a:hover {
+          text-decoration: none; }
+          footer .footer-content .footer-bottom a:hover:before {
+            transform-origin: bottom left;
+            transform: scaleX(1); }
 
 @media (max-width: 991.98px) {
   footer {
