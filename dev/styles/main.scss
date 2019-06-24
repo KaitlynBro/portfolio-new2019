@@ -419,6 +419,7 @@ body {
 		}
 	}
 }
+
 @include media-breakpoint-down(lg) {
 	.about-social-container .skills-list {
 		flex-wrap: wrap;
@@ -429,6 +430,7 @@ body {
 		}
 	}
 }
+
 @include media-breakpoint-down(md) {
 	.about-wrapper {
 		padding:50px 0;
@@ -508,6 +510,16 @@ body {
 	}
 }
 
+@include media-breakpoint-down(lg) {
+	.about-companies-wrapper {
+		.about-companies {
+			img, p {
+				margin:10px 0;
+			}
+		}
+	}
+}
+
 @include media-breakpoint-down(sm) {
 	.about-wrapper {
 		.about-social-container {
@@ -516,6 +528,13 @@ body {
 				max-width: 330px;
 			}
 			.social {
+				a {
+					width:110px;
+					height:110px;
+					.fab {
+						font-size: 25px;
+					}
+				}
 				&:hover {
 					span {
 						border:unset;
@@ -699,13 +718,23 @@ header {
 	header {
 		.header-nav {
 			position: fixed;
+			border-top:3px solid $green;
     		bottom: 0;
 			z-index: 999999;
-			align-items:flex-end;
+			flex-direction: column;
+			justify-content: flex-start;
+			padding: 5px 0;
+			align-items: center;
 			.right {
+				justify-content: center;
+				align-items: center;
 				.logo-wrapper img {
 					max-width: 100px;
 				}
+			}
+			.left {
+				justify-content: center;
+				margin-left: 20px;
 			}
 			.left .menu a.menu-item:not(:last-of-type) {
 				margin:0 5px;
@@ -727,6 +756,7 @@ header {
 		}
 		.header-image {
 			height:50vh;
+			background-attachment: unset;
 		}
 	}
 }
@@ -765,6 +795,8 @@ header {
 			align-items: center;
 			flex-wrap:wrap;
 			a {
+				left: 50%;
+				transform: translate(-50%);
 				opacity: 0;
 				transition: 0.5s;
 				margin:0;
@@ -830,7 +862,7 @@ header {
 					}
 				}
 				.small {
-					flex-direction: row;
+					flex-direction: column;
 					display: flex;
 					width: 100%;
 					.small-image {
@@ -985,7 +1017,6 @@ footer {
 					a {
 						transition:3s;
 						&:hover {
-							text-decoration:underline;
 							&:after {
 								content: unset;
 							}
@@ -993,6 +1024,17 @@ footer {
 					}
 				}
 			}
+		}
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	footer {
+		.footer-content {
+			height: 260px;
+			min-height: unset;
+			justify-content: flex-start;
+			padding: 30px;
 		}
 	}
 }
