@@ -819,6 +819,15 @@ header {
 					height: 500px;
 					object-fit: cover;
 				}
+				&.full {
+					width:100%;
+					display: flex;
+					justify-content: center;
+					img {
+						object-fit: unset;
+						width:80%;
+					}
+				}
 				&:hover {
 					a {
 						opacity:8;
@@ -859,6 +868,12 @@ header {
 					width: 100%;
 					img {
 						height: unset;
+					}
+					&.full {
+						img {
+							object-fit: cover;
+							width:100%;
+						}
 					}
 				}
 				.small {
