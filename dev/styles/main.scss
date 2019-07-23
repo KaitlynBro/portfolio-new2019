@@ -81,6 +81,9 @@ body {
 				flex-direction: row;
 				align-items: center;
 				margin: 50px 0;
+				&.low-margin {
+					margin:20px auto;
+				}
 				.icon-wrapper {
 					margin-right: 20px;
 					border: 1px solid $red;
@@ -107,7 +110,7 @@ body {
 		}
 	}
 	&.process {
-		.services .left {
+		.services .left:not(.no-image) {
 			background-image:url('../../assets/trees.jpg');
 		}
 		.services .right {
@@ -657,16 +660,38 @@ header {
 			}
 		} 
 	}
-	.header-image {
-		background-image:url('../../assets/icon-7.jpg');
-		background-repeat: no-repeat;
-	    background-attachment: fixed;
-	    margin: 0 auto;
+	.header {
 		position: relative;
+		height:80vh;
 		transition:all 1s;
-		background-size: cover;
-		background-position: 20% 20%;
-		height: 80vh;
+		h1 {
+			position: absolute;
+			top: 50%;
+			left:5%;
+			font-weight: 100;
+			font-size: 40px;
+		}
+		&.short-image {
+			background-image:url('../../assets/shopify-header.jpg');
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			margin: 30px auto;
+			position: relative;
+			transition:all 1s;
+			background-size: cover;
+			background-position: 20% 20%;
+		}
+		&.image {
+			margin: 0 auto;
+			background-image:url('../../assets/hero-home.jpg');
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			margin: 0 auto;
+			position: relative;
+			transition:all 1s;
+			background-size: cover;
+			background-position:100% 100%;
+		}
 	}
 }
 
@@ -709,8 +734,10 @@ header {
 		.scroll {
 			bottom: 240px;
 		}
-		.header-image {
-			height:80vh;
+		header {
+			&.image {
+				height:80vh;
+			}
 		}
 	}
 }
@@ -755,7 +782,7 @@ header {
 			bottom: 140px;
 			right:0;
 		}
-		.header-image {
+		.header &.image {
 			height:50vh;
 			background-attachment: unset;
 		}
@@ -872,7 +899,7 @@ header {
 					}
 					&.full {
 						img {
-							object-fit: cover;
+							object-fit: contain;
 							width:100%;
 						}
 					}

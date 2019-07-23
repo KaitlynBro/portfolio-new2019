@@ -204,6 +204,8 @@ body {
       flex-direction: row;
       align-items: center;
       margin: 50px 0; }
+      .services-wrapper .services .right .service-item.low-margin {
+        margin: 20px auto; }
       .services-wrapper .services .right .service-item .icon-wrapper {
         margin-right: 20px;
         border: 1px solid #ed879f;
@@ -222,7 +224,7 @@ body {
           font-size: 24px;
           color: #000;
           font-weight: 300; }
-  .services-wrapper.process .services .left {
+  .services-wrapper.process .services .left:not(.no-image) {
     background-image: url("../../assets/trees.jpg"); }
   .services-wrapper.process .services .right .icon-wrapper {
     border: 1px solid #acc6aa; }
@@ -632,16 +634,35 @@ header {
         position: absolute;
         top: 35%;
         right: -140%; }
-  header .header-image {
-    background-image: url("../../assets/icon-7.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    margin: 0 auto;
+  header .header {
     position: relative;
-    transition: all 1s;
-    background-size: cover;
-    background-position: 20% 20%;
-    height: 80vh; }
+    height: 80vh;
+    transition: all 1s; }
+    header .header h1 {
+      position: absolute;
+      top: 50%;
+      left: 5%;
+      font-weight: 100;
+      font-size: 40px; }
+    header .header.short-image {
+      background-image: url("../../assets/shopify-header.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      margin: 30px auto;
+      position: relative;
+      transition: all 1s;
+      background-size: cover;
+      background-position: 20% 20%; }
+    header .header.image {
+      margin: 0 auto;
+      background-image: url("../../assets/hero-home.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      margin: 0 auto;
+      position: relative;
+      transition: all 1s;
+      background-size: cover;
+      background-position: 100% 100%; }
 
 @media (max-width: 991.98px) {
   header {
@@ -674,7 +695,7 @@ header {
               margin-right: 10px; }
     header .scroll {
       bottom: 240px; }
-    header .header-image {
+    header header.image {
       height: 80vh; } }
 
 @media (max-width: 767.98px) {
@@ -707,7 +728,7 @@ header {
   header .scroll {
     bottom: 140px;
     right: 0; }
-  header .header-image {
+  .header header.image {
     height: 50vh;
     background-attachment: unset; } }
 
@@ -798,7 +819,7 @@ header {
       .portfolio-section .portfolio-content .portfolio-top .big img {
         height: unset; }
       .portfolio-section .portfolio-content .portfolio-top .big.full img {
-        object-fit: cover;
+        object-fit: contain;
         width: 100%; }
     .portfolio-section .portfolio-content .portfolio-top .small {
       flex-direction: column;
