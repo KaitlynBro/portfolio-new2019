@@ -23,9 +23,13 @@
 	<header>
 		<nav class="header-nav col-12">
 			<div class="right">
-				<a href="index.html" class="logo-wrapper">
-					<img src="././assets/logo.png" alt="" class="logo" >
-				</a>
+				<div class="logo">
+					<img src="././assets/logo.svg" alt="">
+					<h1>
+						kb
+						<span>development</span>
+					</h1>
+				</div>
 			</div>
 			<div class="left  show col-lg-6 col-sm-5">
 			  <div class="menu">
@@ -38,6 +42,7 @@
 		</nav>
 		<div class="header image">
 				<!-- Photo by Kumiko SHIMIZU on Unsplash -->
+				<!-- Mobile Photo by Aaron Burden on Unsplash -->
 		</div>
 		<div class="scroll"> 
 			<p>see more</p>
@@ -50,7 +55,7 @@
 				<h6 class="about-header small">hello, i'm</h6>
 				<h4 class="about-header big">Katie</h4>
 				<span class="about-bg"><span class="f">F</span>ront-End Develope<span class="r">r</span></span>
-				<div class="about-me col-11">
+				<div class="about-me col-lg-11 col-sm-12">
 					<p class="about-text">Hi, I'm Katie - a freelance Developer based in Ontario, Canada. I specialize in Shopify development and I am a huge lover of the platform (check out my <a href="https://medium.com/@katiebrouwers" target="_blank">blog </a> for daily Shopify information) Having found my love for coding about three years ago, I am proud to have a deep, heartfelt passion for what I do, and I extend that passion and drive towards every client I have worked with.</p>
 					<p class="about-text">I develop apps that are user-friendly, customer-oriented, accessible, clean, and modern. I am in the midst of dipping my toes into WordPress, and I am studying to be certified in Google Analytics, among other new skills. Do you need a new website, or a revamp on your current site? Or, don't need a new website, but just want to be audited for SEO, Accessibility, or speed? Together, we can create and implement an action plan that works best for you and your business needs. </p>
 					<p class="about-text">Connect with me to learn more about how we can work together to achieve your dream website!</p>	
@@ -116,30 +121,39 @@
 				</div>
 				<div class="col-lg-5 col-md-12 right">
 					<div class="service-item">
-						<div class="icon-wrapper">
+						<div class="icon-wrapper col-2">
 							<i class="fas fa-laptop"></i>
 						</div>
-						<div class="service-name">
+						<div class="service-name col-lg-10 col-sm-8">
 							<h2>Shopify Development</h2>
 							<p>Includes writing Liquid code, online store setup, transferring domains, app setup, and more.</p>
 						</div>
 					</div>
 					<div class="service-item">
-						<div class="icon-wrapper">
+						<div class="icon-wrapper col-2">
 							<i class="fas fa-code"></i>
 						</div>
-						<div class="service-name">
+						<div class="service-name col-lg-10 col-sm-8">
 							<h2>Front-End Development</h2>
 							<p>Don't need to be on Shopify? No problem, I'll help you figure out the best hosting platform for your needs and get you set up with your dream website.</p>
 						</div>
 					</div>
 					<div class="service-item">
-						<div class="icon-wrapper">
+						<div class="icon-wrapper col-2">
 							<i class="fas fa-mobile-alt"></i>
 						</div>
-						<div class="service-name">
+						<div class="service-name col-lg-10 col-sm-8">
 							<h2>Responsive Design</h2>
 							<p>In this day and age, it's a guarantee you're getting website traffic from mobile users. I can make your website completely responsive, and in turn, make sure you're not losing any business from silly UX errors.</p>
+						</div>
+					</div>
+					<div class="service-item">
+						<div class="icon-wrapper col-2">
+							<i class="fas fa-wheelchair"></i>
+						</div>
+						<div class="service-name col-lg-10 col-sm-8">
+							<h2>Auditing</h2>
+							<p>Connect with me to learn about how I can help audit your website for accessibility standards, site speed, and SEO.</p>
 						</div>
 					</div>
 				</div>
@@ -210,9 +224,19 @@
 							<a href="https://kaitlynbro.github.io/goribagency/" target="_blank">View Project</a>
 						</div>
 					</div>
-					<div class="big full">
-						<img src="././assets/toDo.jpg" alt="" target="_blank">
-						<a href="https://kaitlynbro.github.io/toDoApp/" target="_blank">View Project</a>
+				</div>
+				<div class="portfolio-content">
+					<div class="portfolio-top">
+						<div class="big">
+							<img src="././assets/toDo.jpg" alt="" target="_blank">
+							<a href="https://kaitlynbro.github.io/toDoApp/" target="_blank">View Project</a>
+						</div>
+						<div class="small">
+							<h2>What's Coming Up</h2>
+							<p>
+								I am currently obsessing over Reactjs, and really love the cleanliness of a component based app. Similar to SCSS, the ability to create partials for your code, particularly, for repetitive code, is amazing. You can easily inject a component throughout your files where needed without having to move away from a DRY standard. Follow me to keep up to date with upcoming projects including more Reactjs and a new Shopify dev playground to demonstrate some pretty cool things you can do on the Shopify platform with a little bit of Liquid code :)
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -224,37 +248,37 @@
 				</div>
 				<div class="col-lg-5 col-md-12 right">
 					<div class="service-item">
-						<div class="icon-wrapper">
+						<div class="icon-wrapper col-2">
 							<i class="far fa-comments"></i>
 						</div>
-						<div class="service-name">
+						<div class="service-name col-lg-10 col-sm-8">
 							<h2>Initial Conversation</h2>
 							<p>First, we will figure out your goals for your new site.</p>
 						</div>
 					</div>
 					<div class="service-item">
-						<div class="icon-wrapper">
+						<div class="icon-wrapper col-2">
 							<i class="fas fa-envelope-open-text"></i>
 						</div>
-						<div class="service-name">
+						<div class="service-name col-lg-10 col-sm-8">
 							<h2>Questionnaire</h2>
 							<p>Next, I'll send you a brief questionnaire. This will help me create a proposal based on your needs.</p>
 						</div>
 					</div>
 					<div class="service-item">
-						<div class="icon-wrapper">
+						<div class="icon-wrapper col-2">
 							<i class="far fa-copy"></i>
 						</div>
-						<div class="service-name">
+						<div class="service-name col-lg-10 col-sm-8">
 							<h2>Proposal and Review</h2>
 							<p>Next, you can review the proposal I provide and we can make revisions as needed before finalizing it.</p>
 						</div>
 					</div>
 					<div class="service-item">
-						<div class="icon-wrapper">
+						<div class="icon-wrapper col-2">
 							<i class="fas fa-laptop-code"></i>
 						</div>
-						<div class="service-name">
+						<div class="service-name col-lg-10 col-sm-8">
 							<h2>Start Building</h2>
 							<p>Once the contract is signed and an initial deposit is submitted, my work begins!</p>
 						</div>
@@ -279,7 +303,15 @@
 		<footer>
 			<div class="footer-content">
 				<div class="footer-top">
-					<img src="././assets/logo.png" alt="" class="logo" >
+					<div class="right">
+						<div class="logo">
+							<img src="././assets/logo.svg" alt="">
+							<h1>
+								kb
+								<span>development</span>
+							</h1>
+						</div>
+					</div>
 				</div>
 				<div class="footer-bottom">
 					<span class="social-container">
